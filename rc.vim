@@ -497,7 +497,10 @@ nnoremap <silent> <F3> :TagbarToggle<CR>
 
 " setup unite.vim "{{{
 set runtimepath^=~/.vim/bundle/vimproc
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
+try
+    call unite#filters#matcher_default#use(['matcher_fuzzy'])
+catch
+endtry
 let g:unite_source_history_yank_enable = 1
 nnoremap <Leader>b :Unite -quick-match buffer<cr>
 nnoremap <Leader>f :Unite file_rec/async<cr>

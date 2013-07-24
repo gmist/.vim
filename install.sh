@@ -1,7 +1,8 @@
 #! /bin/bash
 
+
 if [ ! -f ~/.vimrc ]; then
-    echo "Create .vimrc"
+    echo "Creating .vimrc"
     touch ~/.vimrc
     echo "source $HOME/.vim/rc.vim" >> ~/.vimrc
 else
@@ -12,17 +13,6 @@ else
     fi
 fi
 
-
-if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
-    echo "Installing NeoBundle"
-    mkdir -p ~/.vim/bundle
-    git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
-fi
-
-if [ ! -d ~/.vim/backup ]; then
-    echo "Create backup dir"
-    mkdir -p ~/.vim/backup
-fi
 
 echo
 read -p "Install spell check dictionaries? (y/n): " RESP
@@ -45,4 +35,19 @@ if [ "$RESP" = "y" ]; then
     curl ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug > ~/.vim/spell/ru.utf-8.sug
 fi
 
+
+if [ ! -d ~/.vim/backup ]; then
+    echo "Creating backup dir"
+    mkdir -p ~/.vim/backup
+fi
+
+
+if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
+    echo "Installing NeoBundle"
+    mkdir -p ~/.vim/bundle
+    git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
+fi
+
+
 vim -c "NeoBundleInstall"
+

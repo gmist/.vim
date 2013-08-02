@@ -229,6 +229,7 @@ set guioptions-=T
 if exists('+colorcolumn')
     set colorcolumn=79
 endif
+set laststatus=2
 
 " Remove gui scrollbars
 set guioptions+=LlRrb

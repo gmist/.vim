@@ -42,6 +42,12 @@ if [ ! -d ~/.vim/backup ]; then
 fi
 
 
+if [ ! -d ~/.vim/undo ]; then
+    echo "Creating undo dir"
+    mkdir -p ~/.vim/undo
+fi
+
+
 if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
     echo "Installing NeoBundle"
     mkdir -p ~/.vim/bundle

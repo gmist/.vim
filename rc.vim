@@ -1,10 +1,10 @@
 " vim: fdm=marker:fdl=0
 
-set nocompatible               " be iMproved
+set nocompatible " be iMproved, explicitly get out of vi-compatible mode
 
 
 " NeoBundle "{{{
-filetype off                   " required!
+filetype off " required!
 
 " Initial setup NeoBundle
 " $ mkdir -p ~/.vim/bundle
@@ -174,17 +174,17 @@ NeoBundle 'mhinz/vim-signify'
 " VIM settings "{{{
 
 " set syntax
-syntax on
-filetype on
-filetype plugin indent on
+syntax on                   " syntax highlighting on
+filetype on                 " try to detect filetypes
+filetype plugin indent on   " load filetype plugins/indent settings
 
-set backupdir=~/.vim/backup
-set noswapfile " Do not create swap files
-set clipboard=unnamed
+set backupdir=~/.vim/backup " where to put backup files
+set undodir=~/.vim/undo     " where to put undo files
+set noswapfile              " Do not create swap files
+set clipboard=unnamed       " share windows clipboard
 
 
-" fix backspace indent
-set backspace=indent,eol,start
+set backspace=indent,eol,start " make backspace a more flexible
 
 
 " encoding
@@ -194,12 +194,8 @@ set fileencodings=utf-8
 set termencoding=utf-8
 
 
-" history
-set history=100000
-
-
-" don't try to highlight lines longer than 800 characters
-set synmaxcol=500
+set history=100000  " give me more history
+set synmaxcol=500   " don't try to highlight lines longer than 500 characters
 
 
 " completion ignore list
@@ -221,29 +217,32 @@ set wildignore+=.idea                            " IntellyJ IDE work dir
 
 
 " GUI settings
-set guifont=Monaco:h12
-set nocompatible
-set number
-set guioptions-=m
-set guioptions-=T
+set guifont=Monaco:h12      " set font
+set number                  " show line numbers
+set guioptions-=m           " remove menu bar
+set guioptions-=T           " remove toolbar
+set completeopt=menuone     " don't use a pop up menu for completions
+set mousehide               " hide the mouse cursor when typing
 if exists('+colorcolumn')
-    set colorcolumn=79
+    set colorcolumn=79      " columns that are highlighted
 endif
-set laststatus=2
+set laststatus=2    " always show the status line
+set lazyredraw      " do not redraw while running macros
+set showcmd         " show the command being typed
 
 " Remove gui scrollbars
 set guioptions+=LlRrb
 set guioptions-=LlRrb
 
 " indent
-set expandtab
-set smarttab
-set bs=2
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set textwidth=80
-set ai             " auto indent
+set expandtab       " convert tabs to spaces
+set smarttab        " auto correct number of spaces when aligning text
+set bs=2            " same as ':set backspace=indent,eol,start'
+set tabstop=2       " the width set to 2 space
+set softtabstop=2   " how many spaces should a tab be
+set shiftwidth=2    " 2 space indent width
+set textwidth=80    " maximum width of text that is being inserted
+set ai              " auto indent
 "set si             " smart indet
 
 
@@ -252,22 +251,27 @@ set ruler           " always show current position
 set hid             " change buffer - without saving
 set nohidden        " remove the buffer when close tab    
 set cursorline      " highlight current line
-
+set noerrorbells    " don't make noise
+set novisualbell    " don't blink
 
 " search
 set path=.,,**
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set showmatch           " Show matching brackets
-set matchpairs+=<:>     " Match < > brackets too
+set hlsearch        " highlight searched text
+set incsearch       " incremental searches
+
+
+set ignorecase      " case insensitive by default
+set smartcase       " if there are caps, go case-sensitive
+set showmatch       " Show matching brackets
+set matchpairs+=<:> " Match < > brackets too
+set matchtime=1     " how many tenths of a second to blink matching brackets
+set shiftround      " when at 3 spaces, and I hit > ... go to 4, not 5
 
 
 " color scheme
 syntax enable
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-  set t_Co=256
+  set t_Co=256 " number of colors
 endif
 
 " set the cursor to a vertical line in insert mode and a solid block

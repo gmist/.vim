@@ -184,9 +184,6 @@ set noswapfile              " Do not create swap files
 set clipboard=unnamed       " share windows clipboard
 
 
-set backspace=indent,eol,start " make backspace a more flexible
-
-
 " encoding
 set encoding=utf-8
 set fileencoding=utf-8

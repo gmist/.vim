@@ -418,8 +418,6 @@ function! Fourtabs()
     set shiftwidth=4        " 4-space indent
 endfunction
 command! -nargs=* Fourtabs call Fourtabs()
-" Default to fourtabs
-Fourtabs
 
 function! Threetabs()
     set tabstop=3
@@ -434,6 +432,8 @@ function! Twotabs()
     set shiftwidth=2
 endfunction
 command! -nargs=* Twotabs call Twotabs()
+" Default to twotabs
+Twotabs
 " "}}}
 
 

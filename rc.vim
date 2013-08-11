@@ -278,6 +278,7 @@ endif
 " in command mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+autocmd InsertEnter,InsertLeave * set cul!
 
 " upon hitting escape to change modes,
 " send successive move-left and move-right

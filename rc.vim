@@ -93,6 +93,9 @@ NeoBundle 'klen/python-mode'
 
 " Syntax and highlighting "{{{
 
+" Tmux config
+NeoBundle 'zaiste/tmux.vim'
+
 " Coffee script
 NeoBundle 'kchmck/vim-coffee-script'
 
@@ -306,6 +309,7 @@ au FileType vim set omnifunc=syntaxcomplete#Complete
 
 " filetype extensions
 augroup filetypedetect
+
   " django templates
   au BufNewFile,BufRead *.jinja2 set filetype=htmldjango
   au BufNewFile,BufRead *.html set filetype=htmldjango
@@ -327,6 +331,7 @@ augroup filetypedetect
 
   " python
   au FileType python set sw=4 sts=4 
+
 augroup END
 
 

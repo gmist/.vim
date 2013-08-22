@@ -134,7 +134,7 @@ NeoBundle 'vim-scripts/Mark--Karkat'
 " "}}}
 
 
-" Snippets and autocomplete "{{{
+" Snippets and autocomplete {{{
 
 " This is an implementation of TextMates Snippets for the Vim Text Editor.
 NeoBundle 'SirVer/ultisnips'
@@ -151,7 +151,10 @@ NeoBundle 'ervandew/supertab'
 " zen-coding for vim
 NeoBundle 'mattn/zencoding-vim'
 
-" "}}}
+" completion system by maintaining a cache of keywords in the current buffer
+NeoBundle 'Shougo/neocomplete.vim'
+
+" }}}
 
 
 " VCS plugins "{{{
@@ -186,8 +189,8 @@ syntax on                   " syntax highlighting on
 filetype on                 " try to detect filetypes
 filetype plugin indent on   " load filetype plugins/indent settings
 
-set backupdir=~/.vim/backup " where to put backup files
-set undodir=~/.vim/undo     " where to put undo files
+set backupdir=~/.vim/tmp/backup " where to put backup files
+set undodir=~/.vim/tmp/undo     " where to put undo files
 set noswapfile              " Do not create swap files
 set clipboard=unnamed       " share windows clipboard
 
@@ -456,6 +459,20 @@ let NERDTreeShowBookmarks=1
 nmap <silent> <F2> :NERDTreeToggle<CR>
 imap <silent> <F2> :NERDTreeToggle<CR>
 " "}}}
+
+
+" setup Neocomplete {{{
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_refresh_always = 1
+let g:neocomplete#max_list = 30
+let g:neocomplete#min_keyword_length = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 1
+let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
+
+" }}}
 
 
 " setup python-mode plugin "{{{

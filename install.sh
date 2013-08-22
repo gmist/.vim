@@ -36,16 +36,23 @@ if [ "$RESP" = "y" ]; then
 fi
 
 
-if [ ! -d ~/.vim/backup ]; then
+if [ ! -d ~/.vim/tmp/backup ]; then
     echo "Creating backup dir"
-    mkdir -p ~/.vim/backup
+    mkdir -p ~/.vim/tmp/backup
 fi
 
 
-if [ ! -d ~/.vim/undo ]; then
+if [ ! -d ~/.vim/tmp/undo ]; then
     echo "Creating undo dir"
-    mkdir -p ~/.vim/undo
+    mkdir -p ~/.vim/tmp/undo
 fi
+
+
+if [ ! -d ~/.vim/tmp/neocomplete ]; then
+    echo "Creating neocomplete dir"
+    mkdir -p ~/.vim/tmp/neocomplete
+fi
+
 
 
 if [ ! -d ~/.vim/bundle/neobundle.vim ]; then

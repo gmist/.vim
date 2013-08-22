@@ -64,9 +64,6 @@ endif
 
 " Buffers "{{{
 
-" search and display information from arbitrary sources like files, buffers, etc
-NeoBundle 'Shougo/unite.vim'
-
 " requires vimproc (recommended for unite.vim)
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -77,8 +74,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 
-" unite-outline provides your Vim's buffer with the outline view
-NeoBundle 'Shougo/unite-outline'
+" search and display information from arbitrary sources like files, buffers, etc
+NeoBundle 'Shougo/unite.vim'
 
 " "}}}
 
@@ -165,13 +162,21 @@ NeoBundle 'tpope/vim-fugitive'
 " mercenary.vim may very well be the worst Mercurial wrapper of all time
 NeoBundle 'phleet/vim-mercenary'
 
-" A plugin to diff and merge two directories recursively
-NeoBundle 'vim-scripts/DirDiff.vim'
-
 " A plugin that shows a diff via Vim's sign column
 NeoBundle 'mhinz/vim-signify'
 
 " "}}}
+
+
+" Unix tools {{{
+
+" A plugin to diff and merge two directories recursively
+NeoBundle 'vim-scripts/DirDiff.vim'
+
+" Hexadecimal editor
+NeoBundleLazy 'vim-scripts/hexman.vim', { 'autoload' :
+            \ { 'mappings' : [['ni', '<Plug>HexManager']]}}
+" }}}
 
 
 " VIM settings "{{{

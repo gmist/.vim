@@ -191,7 +191,8 @@ filetype plugin indent on   " load filetype plugins/indent settings
 
 set backupdir=~/.vim/tmp/backup " where to put backup files
 set undodir=~/.vim/tmp/undo     " where to put undo files
-set noswapfile              " Do not create swap files
+set viewdir=~/.vim/tmp/view     " location for saved views
+set noswapfile              " do not create swap files
 set clipboard=unnamed       " share windows clipboard
 
 

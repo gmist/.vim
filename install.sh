@@ -53,7 +53,10 @@ if [ ! -d ~/.vim/tmp/neocomplete ]; then
     mkdir -p ~/.vim/tmp/neocomplete
 fi
 
-
+if [ ! -d ~/.vim/tmp/view ]; then
+    echo "Creating view dir"
+    mkdir -p ~/.vim/tmp/view
+fi
 
 if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
     echo "Installing NeoBundle"

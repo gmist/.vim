@@ -560,6 +560,12 @@ let g:airline_enable_syntastic=1
 let g:airline_enable_bufferline=1
 " "}}}
 
+" setup syntastic plugin {{{
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol  = '⚡'
+let g:syntastic_style_warning_symbol  = '⚡'
+" }}}
 
 " Vim Reference "{{{
 "

@@ -117,6 +117,9 @@ NeoBundle 'hail2u/vim-css3-syntax'
 " MatchParen for HTML tags
 NeoBundle 'gregsexton/MatchTag'
 
+" A simple highlighting file for JSON constructs
+NeoBundleLazy 'vim-scripts/JSON.vim', {'autoload': {'filetypes': ['json']}}
+
 " "}}}
 
 

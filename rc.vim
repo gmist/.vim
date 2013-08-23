@@ -83,7 +83,7 @@ NeoBundle 'Shougo/unite.vim'
 " Python "{{{
 
 " All-In-One - PyLint, Rope, Pydoc, breakpoints from box
-NeoBundle 'klen/python-mode'
+NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
 
 " "}}}
 
@@ -100,7 +100,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'vim-scripts/django.vim'
 
 " Syntastic is a syntax checking plugin
-" NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 
 " Color toggling plugin for ViM
 NeoBundle 'saghul/vim-colortoggle'

@@ -3,7 +3,7 @@
 set nocompatible " be iMproved, explicitly get out of vi-compatible mode
 
 
-" NeoBundle "{{{
+" NeoBundle {{{
 filetype off " required!
 
 " Initial setup NeoBundle
@@ -19,10 +19,10 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" "}}}
+" }}}
 
 
-" Tools "{{{
+" Tools plugins {{{
 
 " A start screen showing recently used files and sessions
 NeoBundle 'mhinz/vim-startify'
@@ -59,10 +59,10 @@ if  s:os =~ "Darwin"
     let g:Grep_Xargs_Options='-0' 
 endif 
 
-" "}}}
+" }}}
 
 
-" Buffers "{{{
+" Buffers plugins {{{
 
 " requires vimproc (recommended for unite.vim)
 NeoBundle 'Shougo/vimproc.vim', {
@@ -77,18 +77,18 @@ NeoBundle 'Shougo/vimproc.vim', {
 " search and display information from arbitrary sources like files, buffers, etc
 NeoBundle 'Shougo/unite.vim'
 
-" "}}}
+" }}}
 
 
-" Python "{{{
+" Python plugins {{{
 
 " All-In-One - PyLint, Rope, Pydoc, breakpoints from box
 NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
 
-" "}}}
+" }}}
 
 
-" Syntax and highlighting "{{{
+" Syntax and highlighting plugins {{{
 
 " Tmux config
 NeoBundle 'zaiste/tmux.vim'
@@ -120,10 +120,10 @@ NeoBundle 'gregsexton/MatchTag'
 " A simple highlighting file for JSON constructs
 NeoBundleLazy 'vim-scripts/JSON.vim', {'autoload': {'filetypes': ['json']}}
 
-" "}}}
+" }}}
 
 
-" Color schemes "{{{
+" Color schemes plugins {{{
 
 " This plugin makes GVim-only colorschemes Just Work in terminal Vim
 NeoBundle 'vim-scripts/CSApprox'
@@ -134,10 +134,10 @@ NeoBundle 'flazz/vim-colorschemes'
 " Highlight several words in different colors simultaneously
 NeoBundle 'vim-scripts/Mark--Karkat'
 
-" "}}}
+" }}}
 
 
-" Snippets and autocomplete {{{
+" Snippets and autocomplete plugins {{{
 
 " This is an implementation of TextMates Snippets for the Vim Text Editor.
 NeoBundle 'SirVer/ultisnips'
@@ -160,7 +160,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 " }}}
 
 
-" VCS plugins "{{{
+" VCS plugins {{{
 
 " fugitive.vim may very well be the best Git wrapper of all time
 NeoBundle 'tpope/vim-fugitive'
@@ -171,10 +171,10 @@ NeoBundle 'phleet/vim-mercenary'
 " A plugin that shows a diff via Vim's sign column
 NeoBundle 'mhinz/vim-signify'
 
-" "}}}
+" }}}
 
 
-" Unix tools {{{
+" Unix tools plugins {{{
 
 " A plugin to diff and merge two directories recursively
 NeoBundle 'vim-scripts/DirDiff.vim'
@@ -185,7 +185,7 @@ NeoBundleLazy 'vim-scripts/hexman.vim', { 'autoload' :
 " }}}
 
 
-" VIM settings "{{{
+" VIM settings {{{
 
 " set syntax
 syntax on                   " syntax highlighting on
@@ -400,10 +400,10 @@ nnoremap ; :
 " no switch keyboard layout for commands in normal mode.
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
-" "}}}
+" }}}
 
 
-" Spelling "{{{
+" Spelling {{{
 setlocal spell spelllang=
 setlocal nospell
 function ChangeSpellLang()
@@ -422,10 +422,10 @@ endfunc
 
 " map spell on/off for English/Russian
 map <F7> <Esc>:call ChangeSpellLang()<CR>
-" "}}}
+" }}}
 
 
-" Tabsetting functions "{{{
+" Tabsetting functions {{{
 function! Fourtabs()
     set tabstop=4           " 4-space hard tabs
     set softtabstop=4       " 4-space soft tabs
@@ -448,23 +448,23 @@ endfunction
 command! -nargs=* Twotabs call Twotabs()
 " Default to twotabs
 Twotabs
-" "}}}
+" }}}
 
 
-" setup vim-colortoggle plugin "{{{
+" setup vim-colortoggle plugin {{{
 let g:light_colorscheme='pyte'
 let g:dark_colorscheme='kellys'
 let g:default_background_type="dark"
-" "}}}
+" }}}
 
 
-" setup NERDTree plugin "{{{
+" setup NERDTree plugin {{{
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$']
 let NERDTreeShowBookmarks=1
 nmap <silent> <F2> :NERDTreeToggle<CR>
 imap <silent> <F2> :NERDTreeToggle<CR>
-" "}}}
+" }}}
 
 
 " setup Neocomplete {{{
@@ -481,7 +481,7 @@ let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
 " }}}
 
 
-" setup python-mode plugin "{{{
+" setup python-mode plugin {{{
 
 " documentation
 let g:pymode_doc = 0 
@@ -530,16 +530,16 @@ let g:pymode_rope_vim_completion = 1
 let g:pymode_rope_guess_project = 0
 let g:pymode_rope_goto_def_newwin = 0
 let g:pymode_rope_always_show_complete_menu = 1
-" "}}}
+" }}}
 
 
-" setup tagbar plugin "{{{
+" setup tagbar plugin {{{
 " open tagbar using (right sidebar) using <F3>
 nnoremap <silent> <F3> :TagbarToggle<CR>
-" "}}}
+" }}}
 
 
-" setup unite.vim "{{{
+" setup unite.vim {{{
 set runtimepath^=~/.vim/bundle/vimproc
 try
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
@@ -551,14 +551,15 @@ nnoremap <Leader>f :Unite file_rec/async<cr>
 nnoremap <Leader>y :Unite history/yank<cr>
 nnoremap <Leader>g :Unite grep:.<cr>
 nnoremap <Leader>o :Unite outline<cr>
-" "}}}
+" }}}
 
 
 " setup vim-airline {{{
 let g:airline_enable_fugitive=1
 let g:airline_enable_syntastic=1
 let g:airline_enable_bufferline=1
-" "}}}
+" }}}
+
 
 " setup syntastic plugin {{{
 let g:syntastic_error_symbol='✗'
@@ -567,7 +568,8 @@ let g:syntastic_style_error_symbol  = '⚡'
 let g:syntastic_style_warning_symbol  = '⚡'
 " }}}
 
-" Vim Reference "{{{
+
+" Vim Reference {{{
 "
 "  %          --  current filename
 "  %:p        --  current filepath
@@ -654,5 +656,5 @@ let g:syntastic_style_warning_symbol  = '⚡'
 "  zx               --  undo manual fold actions
 "  zX               --  undo manual fold actions and recompute
 "  zR               --  open all folds
-" "}}}
+" }}}
 

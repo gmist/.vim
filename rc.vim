@@ -312,9 +312,10 @@ inoremap <special> <Esc> <Esc>hl
 
 
 " folding
-set foldmethod=indent
-"set foldmethod=syntax
-set foldlevel=99
+if has('folding')
+  set foldmethod=marker " fold on marker / indent, syntax
+  set foldlevel=999
+endif
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 

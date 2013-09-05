@@ -199,8 +199,9 @@ set backupdir=~/.vim/tmp/backup " where to put backup files
 set undodir=~/.vim/tmp/undo     " where to put undo files
 set viewdir=~/.vim/tmp/view     " location for saved views
 set noswapfile              " do not create swap files
-set clipboard=unnamed       " share windows clipboard
-
+if has('unnamedplus')
+  set clipboard+=unnamed    " share windows clipboard
+endif
 
 " encoding
 set encoding=utf-8

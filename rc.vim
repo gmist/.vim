@@ -85,6 +85,9 @@ NeoBundle 'Shougo/unite.vim'
 " All-In-One - PyLint, Rope, Pydoc, breakpoints from box
 NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
 
+" VIM binding to the autocompletion library Jedi
+"NeoBundleLazy 'davidhalter/jedi-vim', {'autoload': {'filetypes': ['python']}}
+
 " }}}
 
 
@@ -533,6 +536,12 @@ let g:pymode_rope_always_show_complete_menu = 1
 " }}}
 
 
+" jedi-vim plugin {{{
+"let g:jedi#popup_select_first = 0
+"let g:jedi#popup_on_dot = 0
+" }}}
+
+
 " setup tagbar plugin {{{
 " open tagbar using (right sidebar) using <F3>
 nnoremap <silent> <F3> :TagbarToggle<CR>
@@ -564,8 +573,9 @@ let g:airline_enable_bufferline=1
 " setup syntastic plugin {{{
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol  = '⚡'
-let g:syntastic_style_warning_symbol  = '⚡'
+let g:syntastic_style_error_symbol  = 'ϟ'
+let g:syntastic_style_warning_symbol  = 'ϟ'
+let g:syntastic_python_checkers=['pylama']
 " }}}
 
 

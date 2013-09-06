@@ -402,7 +402,7 @@ nnoremap <C-y> 3<C-y>
 
 set showbreak=↪
 let mapleader="\<Space>"
-let maplocalleader = "\\" 
+let maplocalleader = ","
 nnoremap ; :
 
 " no switch keyboard layout for commands in normal mode.

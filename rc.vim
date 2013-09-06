@@ -64,7 +64,7 @@ endif
 
 " Buffers plugins {{{
 
-" requires vimproc (recommended for unite.vim)
+" asynchronously run commands in Unite
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'make -f make_mingw32.mak',

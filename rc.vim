@@ -93,6 +93,9 @@ NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
 " VIM binding to the autocompletion library Jedi
 NeoBundleLazy 'davidhalter/jedi-vim', {'autoload': {'filetypes': ['python']}}
 
+" Work with python virtualenvs in vim
+NeoBundle 'jmcantrell/vim-virtualenv'
+
 " }}}
 
 

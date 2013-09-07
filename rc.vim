@@ -38,7 +38,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 
 " provides your Vim's buffer with the outline view
-NeoBundle 'Shougo/unite-outline'
+NeoBundleLazy 'Shougo/unite-outline', {'autoload': {'unite_sources': 'outline'}}
 " }}}
 
 

@@ -22,6 +22,26 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " }}}
 
 
+" Unite plugins {{{
+
+" asynchronously run commands in Unite
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'make -f make_mingw32.mak',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'unix' : 'make -f make_unix.mak',
+\    },
+\ }
+
+" search and display information from arbitrary sources like files, buffers, etc
+NeoBundle 'Shougo/unite.vim'
+
+" provides your Vim's buffer with the outline view
+NeoBundle 'Shougo/unite-outline'
+" }}}
+
+
 " Tools plugins {{{
 
 " A start screen showing recently used files and sessions
@@ -61,24 +81,6 @@ let s:os = system("uname")
 if  s:os =~ "Darwin"
     let g:Grep_Xargs_Options='-0' 
 endif 
-
-" }}}
-
-
-" Buffers plugins {{{
-
-" asynchronously run commands in Unite
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'make -f make_mingw32.mak',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'unix' : 'make -f make_unix.mak',
-\    },
-\ }
-
-" search and display information from arbitrary sources like files, buffers, etc
-NeoBundle 'Shougo/unite.vim'
 
 " }}}
 

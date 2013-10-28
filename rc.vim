@@ -539,7 +539,7 @@ let g:pymode_options_fold = 0
 let g:pymode_options_other = 0
 
 " PyRope autocomplete
-let g:pymode_rope = 0
+let g:pymode_rope = 1
 let g:pymode_rope_global_prefix = '<localleader>R'
 let g:pymode_rope_local_prefix = '<localleader>r'
 let g:pymode_rope_auto_project = 1

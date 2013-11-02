@@ -212,6 +212,8 @@ set undodir=~/.vim/tmp/undo     " where to put undo files
 set viewdir=~/.vim/tmp/view     " location for saved views
 set noswapfile              " do not create swap files
 if has('unnamedplus')
+  set clipboard+=unnamedplus
+else
   set clipboard+=unnamed    " share windows clipboard
 endif
 

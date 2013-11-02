@@ -529,7 +529,7 @@ let g:pymode_folding = 1
 let g:pymode_motion = 1
 
 " Linting
-let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
+let g:pymode_lint_checker = "pylama,pyflakes,pep8,mccabe"
 let g:pymode_lint = 1
 let g:pymode_lint_cwindow = 0
 
@@ -597,7 +597,8 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol  = 'ϟ'
 let g:syntastic_style_warning_symbol  = '≈'
-let g:syntastic_python_checkers=['pylama']
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_ignore_files = ['\.py$']
 " }}}
 
 

@@ -135,6 +135,9 @@ NeoBundleLazy 'vim-scripts/JSON.vim', {'autoload': {'filetypes': ['json']}}
 
 " syntax highlighting for Jade templates
 NeoBundle 'digitaltoad/vim-jade'
+
+" nginx syntax files
+NeoBundle 'evanmiller/nginx-vim-syntax'
 " }}}
 
 

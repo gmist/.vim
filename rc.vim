@@ -577,11 +577,11 @@ try
 catch
 endtry
 let g:unite_source_history_yank_enable = 1
-nnoremap <Leader>b :Unite -quick-match buffer<cr>
-nnoremap <Leader>f :Unite file_rec/async<cr>
-nnoremap <Leader>y :Unite history/yank<cr>
-nnoremap <Leader>g :Unite grep:.<cr>
-nnoremap <Leader>o :Unite outline<cr>
+nnoremap <Leader>ub :Unite -quick-match buffer<cr>
+nnoremap <Leader>uf :Unite file_rec/async<cr>
+nnoremap <Leader>uy :Unite history/yank<cr>
+nnoremap <Leader>ug :Unite grep:.<cr>
+nnoremap <Leader>uo :Unite outline<cr>
 " }}}
 
 

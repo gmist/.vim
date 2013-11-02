@@ -596,7 +596,7 @@ let g:airline_enable_bufferline=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol  = 'ϟ'
-let g:syntastic_style_warning_symbol  = 'ϟ'
+let g:syntastic_style_warning_symbol  = '≈'
 let g:syntastic_python_checkers=['pylama']
 " }}}
 

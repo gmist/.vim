@@ -575,21 +575,6 @@ nnoremap <silent> <F3> :TagbarToggle<CR>
 " }}}
 
 
-" setup unite.vim {{{
-set runtimepath^=~/.vim/bundle/vimproc
-try
-    call unite#filters#matcher_default#use(['matcher_fuzzy'])
-catch
-endtry
-let g:unite_source_history_yank_enable = 1
-nnoremap <Leader>ub :Unite -quick-match buffer<cr>
-nnoremap <Leader>uf :Unite file_rec/async<cr>
-nnoremap <Leader>uy :Unite history/yank<cr>
-nnoremap <Leader>ug :Unite grep:.<cr>
-nnoremap <Leader>uo :Unite outline<cr>
-" }}}
-
-
 " setup vim-airline {{{
 let g:airline_enable_fugitive=1
 let g:airline_enable_syntastic=1
@@ -606,6 +591,9 @@ let g:syntastic_python_checkers=['pylint']
 let g:syntastic_ignore_files = ['\.py$']
 " }}}
 
+
+" unite config
+source ~/.vim/unite.vim
 
 " Vim Reference {{{
 "

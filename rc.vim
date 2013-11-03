@@ -79,6 +79,9 @@ NeoBundle 'Lokaltog/vim-easymotion'
 " The grep plugin integrates the grep, fgrep, egrep, and agrep tools
 NeoBundle 'vim-scripts/grep.vim'
 
+" very simple vim plugin for easy resizing of your vim windows
+NeoBundle 'jimsei/winresizer'
+
 let s:os = system("uname")
 if  s:os =~ "Darwin"
     let g:Grep_Xargs_Options='-0' 

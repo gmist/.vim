@@ -9,7 +9,7 @@ let g:unite_source_history_yank_enable = 1
 
 " menu prefix key Unite menus {{{
 nmap [unite] <Nop>
-nmap . [unite]
+nmap <LocalLeader> [unite]
 " }}}
 
 " unite features {{{

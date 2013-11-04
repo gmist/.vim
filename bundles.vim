@@ -162,6 +162,10 @@ NeoBundle 'Shougo/neocomplete.vim'
 " fugitive.vim may very well be the best Git wrapper of all time
 NeoBundle 'tpope/vim-fugitive'
 
+" Git viewer (a 'gitk clone')
+NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'],
+            \ 'autoload':{'commands':'Gitv'}}
+
 " mercenary.vim may very well be the worst Mercurial wrapper of all time
 NeoBundle 'phleet/vim-mercenary'
 

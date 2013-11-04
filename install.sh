@@ -58,12 +58,4 @@ if [ ! -d ~/.vim/tmp/view ]; then
     mkdir -p ~/.vim/tmp/view
 fi
 
-if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
-    echo "Installing NeoBundle"
-    mkdir -p ~/.vim/bundle
-    git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
-fi
-
-
-vim -c "NeoBundleInstall"
-
+vim

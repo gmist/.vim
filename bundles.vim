@@ -94,9 +94,6 @@ NeoBundle 'vim-scripts/django.vim'
 " Syntastic is a syntax checking plugin
 NeoBundle 'scrooloose/syntastic'
 
-" Color toggling plugin for ViM
-NeoBundle 'saghul/vim-colortoggle'
-
 " vim syntax for LESS (dynamic CSS)
 NeoBundle 'groenewege/vim-less'
 
@@ -121,6 +118,9 @@ NeoBundle 'evanmiller/nginx-vim-syntax'
 
 
 " Color schemes plugins {{{
+
+" Color toggling plugin for ViM
+NeoBundle 'saghul/vim-colortoggle'
 
 " This plugin makes GVim-only colorschemes Just Work in terminal Vim
 NeoBundle 'vim-scripts/CSApprox'

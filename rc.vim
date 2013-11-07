@@ -2,7 +2,7 @@
 
 set nocompatible " be iMproved, explicitly get out of vi-compatible mode
 
-source ~/.vim/neobundle-init.vim
+source ~/.vim/init.vim
 source ~/.vim/bundles.vim
 source ~/.vim/settings.vim
 
@@ -54,13 +54,6 @@ Twotabs
 " }}}
 
 
-" setup vim-colortoggle plugin {{{
-let g:light_colorscheme='pyte'
-let g:dark_colorscheme='kellys'
-let g:default_background_type="dark"
-" }}}
-
-
 " setup NERDTree plugin {{{
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$']
@@ -71,7 +64,6 @@ imap <silent> <F2> :NERDTreeToggle<CR>
 
 
 " setup Neocomplete {{{
-
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#enable_auto_select = 1
@@ -80,7 +72,6 @@ let g:neocomplete#max_list = 30
 let g:neocomplete#min_keyword_length = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 1
 let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
-
 " }}}
 
 
@@ -107,9 +98,12 @@ let g:syntastic_ignore_files = ['\.py$']
 " }}}
 
 
+" vim-colortoggle
+source ~/.vim/b-vim-colortoggle.vim
+
 " python-mode config
-source ~/.vim/python-mode.vim
+source ~/.vim/b-python-mode.vim
 
 " unite config
-source ~/.vim/unite.vim
+source ~/.vim/b-unite.vim
 

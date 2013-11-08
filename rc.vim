@@ -54,52 +54,25 @@ Twotabs
 " }}}
 
 
-" setup NERDTree plugin {{{
-let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$']
-let NERDTreeShowBookmarks=1
-nmap <silent> <F2> :NERDTreeToggle<CR>
-imap <silent> <F2> :NERDTreeToggle<CR>
-" }}}
+" Load bundles settings {{{
 
+" tagbar
+source ~/.vim/b-tagbar.vim
 
-" setup Neocomplete {{{
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#enable_auto_select = 1
-let g:neocomplete#enable_refresh_always = 1
-let g:neocomplete#max_list = 30
-let g:neocomplete#min_keyword_length = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 1
-let g:neocomplete#data_directory = '~/.vim/tmp/neocomplete'
-" }}}
+" vim-airline
+source ~/.vim/b-airline.vim
 
+" NERDTree
+source ~/.vim/b-nerdtree.vim
 
-" setup tagbar plugin {{{
-" open tagbar using (right sidebar) using <F3>
-nnoremap <silent> <F3> :TagbarToggle<CR>
-" }}}
+" syntastic
+source ~/.vim/b-syntastic.vim
 
-
-" setup vim-airline {{{
-let g:airline_enable_fugitive=1
-let g:airline_enable_syntastic=1
-let g:airline_enable_bufferline=1
-" }}}
-
-
-" setup syntastic plugin {{{
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol  = 'ϟ'
-let g:syntastic_style_warning_symbol  = '≈'
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_ignore_files = ['\.py$']
-" }}}
-
+" neocomplete
+source ~/.vim/b-neocomplete.vim
 
 " vim-colortoggle
-source ~/.vim/b-vim-colortoggle.vim
+source ~/.vim/b-colortoggle.vim
 
 " python-mode config
 source ~/.vim/b-python-mode.vim
@@ -107,3 +80,4 @@ source ~/.vim/b-python-mode.vim
 " unite config
 source ~/.vim/b-unite.vim
 
+" }}}

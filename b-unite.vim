@@ -62,4 +62,3 @@ let g:unite_source_menu_menus.windows.command_candidates = [
   \]
 nmap <silent>[unite]w :Unite -silent -start-insert menu:windows<CR>
 " }}}
-

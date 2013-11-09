@@ -7,10 +7,12 @@ endtry
 let g:unite_source_history_yank_enable = 1
 " }}}
 
+
 " menu prefix key Unite menus {{{
 nmap [unite] <Nop>
 nmap <LocalLeader> [unite]
 " }}}
+
 
 " unite features {{{
 nnoremap [unite]b :Unite -quick-match buffer<cr>
@@ -18,6 +20,7 @@ nnoremap [unite]t :Unite -quick-match tab<cr>
 nnoremap [unite]y :Unite history/yank<cr>
 nnoremap [unite]o :Unite outline<cr>
 " }}}
+
 
 " menus {{{
 if !exists("g:unite_source_menu_menus")
@@ -27,10 +30,11 @@ endif
 nnoremap <silent>[unite]m :Unite -silent -winheight=20 menu<cr>
 " }}}
 
+
 " file search menu {{{
 let g:unite_source_menu_menus.files = {
   \ 'description' : 'search files *[unite]f*',
-  \}
+\}
 let g:unite_source_menu_menus.files.command_candidates = [
   \['-> recursive', 'Unite -start-insert file_rec/async'],
   \['-> grep .', 'Unite -no-quit grep:.'],
@@ -39,14 +43,15 @@ let g:unite_source_menu_menus.files.command_candidates = [
   \['-> grep', 'Unite -no-quit grep'],
   \['-> find', 'Unite find'],
   \['-> vimgrep', 'Unite vimgrep'],
-  \]
+\]
 nnoremap <silent>[unite]f :Unite -silent -start-insert menu:files<CR>
 " }}}
+
 
 " buffers, tabs & windows menu {{{
 let g:unite_source_menu_menus.windows = {
   \ 'description' : 'navigate by buffers, tabs & windows cmd *[unite]w*',
-  \}
+\}
 let g:unite_source_menu_menus.windows.command_candidates = [
   \['-> buffers *[unite]b*', 'Unite -quick-match buffer'],
   \['-> tabs *[unite]t*', 'Unite tab'],
@@ -59,6 +64,20 @@ let g:unite_source_menu_menus.windows.command_candidates = [
   \['-> close current window', 'close'],
   \['-> NerdTree *F2*', 'NERDTreeToggle'],
   \['-> Taglist *F3*', 'TagbarToggle'],
-  \]
-nmap <silent>[unite]w :Unite -silent -start-insert menu:windows<CR>
+\]
+nmap <silent>[unite]w :Unite -silent -start-insert menu:windows<cr>
+" }}}
+
+
+" file encoding menu {{{
+let g:unite_source_menu_menus.encoding = {
+    \ 'description' : 'select file encoding',
+\}
+let g:unite_source_menu_menus.encoding.command_candidates = [
+  \['-> utf8', 'e ++enc=utf8'],
+  \['-> cp1251', 'e ++enc=cp1251 ++ff=dos'],
+  \['-> koi8-r', 'e ++enc=koi8-r ++ff=unix'],
+  \['-> cp866', 'e ++enc=cp866 ++ff=dos'],
+\]
+nnoremap <silent>[unite]ce :Unite -silent menu:encoding<cr>
 " }}}

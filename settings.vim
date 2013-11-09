@@ -21,13 +21,6 @@ set fileencoding=utf-8
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 set termencoding=utf-8
 
-menu Encoding.koi8-r :e ++enc=koi8-r ++ff=unix<CR>
-menu Encoding.cp1251 :e ++enc=cp1251 ++ff=dos<CR>
-menu Encoding.cp866 :e ++enc=cp866 ++ff=dos<CR>
-menu Encoding.utf-8 :e ++enc=utf8<CR>
-
-map <F8> :emenu Encoding.
-
 
 set history=100000  " give me more history
 set synmaxcol=500   " don't try to highlight lines longer than 500 characters

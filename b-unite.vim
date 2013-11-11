@@ -79,5 +79,18 @@ let g:unite_source_menu_menus.encoding.command_candidates = [
   \['-> koi8-r', 'e ++enc=koi8-r ++ff=unix'],
   \['-> cp866', 'e ++enc=cp866 ++ff=dos'],
 \]
-nnoremap <silent>[unite]ce :Unite -silent menu:encoding<cr>
+nnoremap <silent>[unite]ce :Unite -silent -start-insert menu:encoding<cr>
+" }}}
+
+
+" Spelling {{{
+let g:unite_source_menu_menus.spelling ={
+  \'description': 'select spelling language',
+\}
+let g:unite_source_menu_menus.spelling.command_candidates = [
+  \['en', 'setlocal spell spelllang=en_us'],
+  \['ru', 'setlocal spell spelllang=ru'],
+  \['off', 'setlocal spell spelllang= nospell'],
+\]
+nnoremap <silent>[unite]cs :Unite -silent -start-insert menu:spelling<cr>
 " }}}

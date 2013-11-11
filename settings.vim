@@ -21,6 +21,9 @@ set fileencoding=utf-8
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 set termencoding=utf-8
 
+" disable spelling
+setlocal spell spelllang=
+setlocal nospell
 
 set history=100000  " give me more history
 set synmaxcol=500   " don't try to highlight lines longer than 500 characters

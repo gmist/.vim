@@ -6,27 +6,6 @@ source ~/.vim/init.vim
 source ~/.vim/bundles.vim
 source ~/.vim/settings.vim
 
-" Spelling {{{
-setlocal spell spelllang=
-setlocal nospell
-function ChangeSpellLang()
-    if &spelllang =~ "en_us"
-        setlocal spell spelllang=ru
-        echo "spelllang: ru"
-    elseif &spelllang =~ "ru"
-        setlocal spell spelllang=
-        setlocal nospell
-        echo "spelllang: off"
-    else
-        setlocal spell spelllang=en_us
-        echo "spelllang: en"
-    endif
-endfunc
-
-" map spell on/off for English/Russian
-map <F7> <Esc>:call ChangeSpellLang()<CR>
-" }}}
-
 
 " Tabsetting functions {{{
 function! Fourtabs()

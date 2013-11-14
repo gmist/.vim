@@ -117,6 +117,10 @@ NeoBundle 'digitaltoad/vim-jade'
 
 " nginx syntax files
 NeoBundle 'evanmiller/nginx-vim-syntax'
+
+" mustache and handlebars mode
+NeoBundle 'mustache/vim-mode'
+let g:mustache_abbreviations = 1
 " }}}
 
 

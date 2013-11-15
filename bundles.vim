@@ -124,6 +124,9 @@ let g:mustache_abbreviations = 1
 
 " visually displaying indent levels
 NeoBundle 'nathanaelkane/vim-indent-guides'
+
+" automatically adjusts 'shiftwidth' and 'expandtab'
+NeoBundle 'tpope/vim-sleuth'
 " }}}
 
 

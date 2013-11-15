@@ -66,17 +66,6 @@ set showcmd         " show the command being typed
 set guioptions+=LlRrb
 set guioptions-=LlRrb
 
-" indent
-set expandtab       " convert tabs to spaces
-set smarttab        " auto correct number of spaces when aligning text
-set bs=2            " same as ':set backspace=indent,eol,start'
-set tabstop=2       " the width set to 2 space
-set softtabstop=2   " how many spaces should a tab be
-set shiftwidth=2    " 2 space indent width
-set textwidth=80    " maximum width of text that is being inserted
-set ai              " auto indent
-"set si             " smart indet
-
 
 set nowrap          " no wrap lines
 set ruler           " always show current position

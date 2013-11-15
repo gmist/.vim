@@ -121,6 +121,9 @@ NeoBundle 'evanmiller/nginx-vim-syntax'
 " mustache and handlebars mode
 NeoBundle 'mustache/vim-mode'
 let g:mustache_abbreviations = 1
+
+" visually displaying indent levels
+NeoBundle 'nathanaelkane/vim-indent-guides'
 " }}}
 
 

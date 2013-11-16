@@ -7,32 +7,6 @@ source ~/.vim/bundles.vim
 source ~/.vim/settings.vim
 
 
-" Tabsetting functions {{{
-function! Fourtabs()
-    set tabstop=4           " 4-space hard tabs
-    set softtabstop=4       " 4-space soft tabs
-    set shiftwidth=4        " 4-space indent
-endfunction
-command! -nargs=* Fourtabs call Fourtabs()
-
-function! Threetabs()
-    set tabstop=3
-    set softtabstop=3
-    set shiftwidth=3
-endfunction
-command! -nargs=* Threetabs call Threetabs()
-
-function! Twotabs()
-    set tabstop=2
-    set softtabstop=2
-    set shiftwidth=2
-endfunction
-command! -nargs=* Twotabs call Twotabs()
-" Default to twotabs
-Twotabs
-" }}}
-
-
 " Load bundles settings {{{
 
 " tagbar

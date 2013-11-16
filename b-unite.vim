@@ -5,6 +5,7 @@ try
 catch
 endtry
 let g:unite_source_history_yank_enable = 1
+let g:unite_candidate_icon="->"
 " }}}
 
 
@@ -36,13 +37,13 @@ let g:unite_source_menu_menus.files = {
   \ 'description' : 'search files *[unite]f*',
 \}
 let g:unite_source_menu_menus.files.command_candidates = [
-  \['-> recursive', 'Unite -start-insert file_rec/async'],
-  \['-> grep .', 'Unite -no-quit grep:.'],
-  \['-> find .', 'Unite find:.'],
-  \['-> locate', 'Unite -start-insert locate'],
-  \['-> grep', 'Unite -no-quit grep'],
-  \['-> find', 'Unite find'],
-  \['-> vimgrep', 'Unite vimgrep'],
+  \['recursive', 'Unite -start-insert file_rec/async'],
+  \['grep .', 'Unite -no-quit grep:.'],
+  \['find .', 'Unite find:.'],
+  \['locate', 'Unite -start-insert locate'],
+  \['grep', 'Unite -no-quit grep'],
+  \['find', 'Unite find'],
+  \['vimgrep', 'Unite vimgrep'],
 \]
 nnoremap <silent>[unite]f :Unite -silent -start-insert menu:files<CR>
 " }}}
@@ -53,17 +54,17 @@ let g:unite_source_menu_menus.windows = {
   \ 'description' : 'navigate by buffers, tabs & windows cmd *[unite]w*',
 \}
 let g:unite_source_menu_menus.windows.command_candidates = [
-  \['-> buffers *[unite]b*', 'Unite -quick-match buffer'],
-  \['-> tabs *[unite]t*', 'Unite tab'],
-  \['-> windows', 'Unite window'],
-  \['-> new left window', 'Unite -start-insert -default-action=left file'],
-  \['-> new right window', 'Unite -start-insert -default-action=right file'],
-  \['-> new above window', 'Unite -start-insert -default-action=above file'],
-  \['-> new below window', 'Unite -start-insert -default-action=below file'],
-  \['-> resize windows *<C-e>*', 'WinResizerStartResize'],
-  \['-> close current window', 'close'],
-  \['-> NerdTree *F2*', 'NERDTreeToggle'],
-  \['-> Taglist *F3*', 'TagbarToggle'],
+  \['buffers *[unite]b*', 'Unite -quick-match buffer'],
+  \['tabs *[unite]t*', 'Unite tab'],
+  \['windows', 'Unite window'],
+  \['new left window', 'Unite -start-insert -default-action=left file'],
+  \['new right window', 'Unite -start-insert -default-action=right file'],
+  \['new above window', 'Unite -start-insert -default-action=above file'],
+  \['new below window', 'Unite -start-insert -default-action=below file'],
+  \['resize windows *<C-e>*', 'WinResizerStartResize'],
+  \['close current window', 'close'],
+  \['NerdTree *F2*', 'NERDTreeToggle'],
+  \['Taglist *F3*', 'TagbarToggle'],
 \]
 nmap <silent>[unite]w :Unite -silent -start-insert menu:windows<cr>
 " }}}
@@ -74,10 +75,10 @@ let g:unite_source_menu_menus.encoding = {
     \ 'description' : 'select file encoding',
 \}
 let g:unite_source_menu_menus.encoding.command_candidates = [
-  \['-> utf8', 'e ++enc=utf8'],
-  \['-> cp1251', 'e ++enc=cp1251 ++ff=dos'],
-  \['-> koi8-r', 'e ++enc=koi8-r ++ff=unix'],
-  \['-> cp866', 'e ++enc=cp866 ++ff=dos'],
+  \['utf8', 'e ++enc=utf8'],
+  \['cp1251', 'e ++enc=cp1251 ++ff=dos'],
+  \['koi8-r', 'e ++enc=koi8-r ++ff=unix'],
+  \['cp866', 'e ++enc=cp866 ++ff=dos'],
 \]
 nnoremap <silent>[unite]ce :Unite -silent -start-insert menu:encoding<cr>
 " }}}
@@ -93,4 +94,17 @@ let g:unite_source_menu_menus.spelling.command_candidates = [
   \['off', 'setlocal spell spelllang= nospell'],
 \]
 nnoremap <silent>[unite]cs :Unite -silent -start-insert menu:spelling<cr>
+" }}}
+
+
+" Tabs width {{{
+let g:unite_source_menu_menus.tabs = {
+  \'description': 'select tabs width',
+\}
+let g:unite_source_menu_menus.tabs.command_candidates = [
+  \['2', 'set ts=2 sts=2 sw=2 et'],
+  \['4', 'set ts=4 sts=4 sw=4 et'],
+  \['3', 'set ts=3 sts=3 sw=3 et'],
+\]
+nnoremap <silent>[unite]ct :Unite -silent -start-insert menu:tabs<cr>
 " }}}

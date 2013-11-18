@@ -48,10 +48,3 @@ let g:pymode_rope_guess_project = 0
 let g:pymode_rope_goto_def_newwin = 0
 let g:pymode_rope_always_show_complete_menu = 1
 " }}}
-
-
-" jedi-vim plugin {{{
-let g:jedi#popup_select_first = 0
-let g:jedi#popup_on_dot = 0
-" }}}
-

@@ -27,8 +27,11 @@ source ~/.vim/b-neocomplete.vim
 " vim-colortoggle
 source ~/.vim/b-colortoggle.vim
 
-" python-mode config
+" python-mode settings
 source ~/.vim/b-python-mode.vim
+
+" jedi-vim settings
+source ~/.vim/b-jedi-vim.vim
 
 " unite config
 source ~/.vim/b-unite.vim

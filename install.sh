@@ -52,6 +52,10 @@ else
   fi
 fi
 
+
+git clone git@github.com:gmist/.vim.git ~/.vim
+
+
 echo
 read -p "Install spell checker dictionaries? (y/n): " RESP
 if [ "$RESP" = "y" ]; then
@@ -91,11 +95,10 @@ if [ ! -d ~/.vim/tmp/neocomplete ]; then
   mkdir -p ~/.vim/tmp/neocomplete
 fi
 
+
 if [ ! -d ~/.vim/tmp/view ]; then
   echo "Creating view dir ('$HOME/.vim/tmp/view')"
   mkdir -p ~/.vim/tmp/view
 fi
 
-cd ~/.vim
-git clone git@github.com:gmist/.vim.git
 vim

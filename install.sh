@@ -30,13 +30,13 @@ fi
 
 
 if [ ! -f ~/.vimrc ] && [ ! -d ~/.vim ]; then
-  create_vim_files()
+  create_vim_files
 else
   echo
   read -p "Replace your '$HOME/.vimrc' and '$HOME/.vim' directory? (y/n): " RESP
   if [ "$RESP" = "y" ]; then
-    delete_vim_files()
-    create_vim_files()
+    delete_vim_files
+    create_vim_files
   else
     echo "Ok, let's finish some other time"
     exit 1

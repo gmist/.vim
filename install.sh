@@ -15,17 +15,26 @@ create_vim_files(){
 }
 
 
+echo "==== Prepare to install .vim ===="
+
+
+echo "Check git..."
 which git > /dev/null
 if [ "$?" != "0" ]; then
   echo "Oops... git was not found, install it before"
   exit 1
+else
+  echo "Ok"
 fi
 
 
+echo "Check vim..."
 which vim > /dev/null
 if [ "$?" != "0" ]; then
   echo "Oops... vim was not found, install it before"
   exit 1
+else
+  echo "Ok"
 fi
 
 

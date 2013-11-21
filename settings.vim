@@ -1,5 +1,3 @@
-" VIM settings {{{
-
 " set syntax
 syntax on                   " syntax highlighting on
 filetype on                 " try to detect filetypes
@@ -223,4 +221,6 @@ nnoremap ; :
 " no switch keyboard layout for commands in normal mode.
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
-" }}}
+" improve naviation on wrapped lines
+noremap j gj
+noremap k gk

@@ -127,6 +127,9 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " automatically adjusts 'shiftwidth' and 'expandtab'
 NeoBundle 'tpope/vim-sleuth'
+
+" HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim
+NeoBundle 'othree/html5.vim'
 " }}}
 
 

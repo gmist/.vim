@@ -46,8 +46,9 @@ NeoBundle 'rainerborene/vim-timetap'
 " Vim plugin that displays tags in a window, ordered by class etc.
 NeoBundle 'majutsushi/tagbar'
 
-" Vim plugin to visualize your Vim undo tree
+" plugin to visualize your undo tree
 NeoBundle 'sjl/gundo.vim'
+nnoremap <LocalLeader>u :GundoToggle<cr>
 
 " Eclipse like task list
 NeoBundle 'vim-scripts/TaskList.vim'

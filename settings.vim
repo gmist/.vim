@@ -186,6 +186,19 @@ cab WQ wq
 cab W w
 cab Q q
 
+" Fix russian layout
+cab ц w
+cab й q
+cab Ц! w!
+cab Й! q!
+cab цй wq
+cab Цй wq
+cab Цф wa
+cab цЙ wq
+cab ЦЙ wq
+cab Ц w
+cab Й q
+
 " easy buffers navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j

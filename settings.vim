@@ -224,3 +224,5 @@ set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁ
 " improve naviation on wrapped lines
 noremap j gj
 noremap k gk
+noremap о gj
+noremap л gk

@@ -108,3 +108,14 @@ let g:unite_source_menu_menus.tabs.command_candidates = [
 \]
 nnoremap <silent>[unite]ct :Unite -silent -start-insert menu:tabs<cr>
 " }}}
+
+" Other settings {{{
+let g:unite_source_menu_menus.other = {
+  \'description': 'other settings',
+\}
+let g:unite_source_menu_menus.other.command_candidates = [
+  \['wrap on', 'set wrap linebreak nolist'],
+  \['wrap off', 'set nowrap'],
+\]
+nnoremap <silent>[unite]co :Unite -silent -start-insert menu:other<cr>
+" }}}

@@ -53,7 +53,7 @@ else
 fi
 
 
-git clone git@github.com:gmist/.vim.git ~/.vim
+git clone https://github.com/gmist/.vim.git ~/.vim
 
 
 echo

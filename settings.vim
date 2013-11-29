@@ -70,8 +70,8 @@ set ruler           " always show current position
 set hid             " change buffer - without saving
 set nohidden        " remove the buffer when close tab    
 set cursorline      " highlight current line
-"set cursorcolumn    " highlight cursor column
-"hi! link CursorColumn CursorLine
+set cursorcolumn    " highlight cursor column
+hi! link CursorColumn CursorLine
 set noerrorbells    " don't make noise
 set novisualbell    " don't blink
 

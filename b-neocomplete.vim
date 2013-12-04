@@ -4,6 +4,7 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#enable_auto_select = 1
 let g:neocomplete#enable_refresh_always = 1
 let g:neocomplete#enable_auto_close_preview = 0
+let g:neocomplcache_enable_fuzzy_completion=1
 let g:neocomplete#max_list = 30
 let g:neocomplete#min_keyword_length = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 1

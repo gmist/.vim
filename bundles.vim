@@ -173,7 +173,7 @@ NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'Shougo/neocomplete.vim'
 
 " automatic closing of quotes, parenthesis, brackets, etc
-NeoBundle 'delimitMate.vim'
+"NeoBundle 'delimitMate.vim'
 " }}}
 
 

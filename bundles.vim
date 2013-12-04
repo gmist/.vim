@@ -172,8 +172,6 @@ NeoBundle 'mattn/zencoding-vim'
 " completion system by maintaining a cache of keywords in the current buffer
 NeoBundle 'Shougo/neocomplete.vim'
 
-" automatic closing of quotes, parenthesis, brackets, etc
-"NeoBundle 'delimitMate.vim'
 " }}}
 
 

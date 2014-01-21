@@ -54,7 +54,7 @@ set guioptions-=T           " remove toolbar
 set completeopt=menuone     " don't use a pop up menu for completions
 set mousehide               " hide the mouse cursor when typing
 if exists('+colorcolumn')
-    set colorcolumn=79      " columns that are highlighted
+    set colorcolumn=80      " columns that are highlighted
 endif
 set laststatus=2    " always show the status line
 set lazyredraw      " do not redraw while running macros

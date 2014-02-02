@@ -70,9 +70,6 @@ NeoBundle 'jimsei/winresizer'
 
 " Python plugins {{{
 
-" All-In-One - PyLint, Rope, Pydoc, breakpoints from box
-NeoBundleLazy 'klen/python-mode', {'autoload': {'filetypes': ['python']}}
-
 " VIM binding to the autocompletion library Jedi
 NeoBundleLazy 'davidhalter/jedi-vim', {'autoload': {'filetypes': ['python']}}
 

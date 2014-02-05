@@ -165,6 +165,9 @@ augroup filetypedetect
 
 augroup END
 
+augroup autoit
+  au FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+augroup END
 
 " python syntax
 let python_highlight_all=1

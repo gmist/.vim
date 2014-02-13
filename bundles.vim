@@ -164,7 +164,7 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'tpope/vim-surround'
 
 " Markdown syntax highlight for Vim editor with snippets support
-NeoBundle 'gmarik/vim-markdown'
+NeoBundleLazy 'gmarik/vim-markdown', {'autoload':{'filetypes':['markdown']}}
 
 " Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs
 NeoBundle 'ervandew/supertab'

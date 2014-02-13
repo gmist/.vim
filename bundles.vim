@@ -127,8 +127,11 @@ NeoBundle 'tpope/vim-sleuth'
 " HTML5 + inline SVG omnicomplete funtion, indent and syntax for Vim
 NeoBundle 'othree/html5.vim'
 
-"  syntax, indent, and filetype plugin files for git, gitcommit, etc
+" syntax, indent, and filetype plugin files for git, gitcommit, etc
 NeoBundle 'tpope/vim-git'
+
+" enhanced javascript syntax for vim
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 " }}}
 
 

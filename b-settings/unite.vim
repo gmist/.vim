@@ -122,18 +122,25 @@ nnoremap <silent>[unite]co :Unite -silent -start-insert menu:other<cr>
 
 " Utils {{{
 function ClearVimCache()
+  let $f = @%
+  bdelete
   silent !rm -rf ~/.vim/tmp
   silent !mkdir -p ~/.vim/tmp/backup
   silent !mkdir -p ~/.vim/tmp/neocomplete
   silent !mkdir -p ~/.vim/tmp/undo
   silent !mkdir -p ~/.vim/tmp/view
+  if $f != ''
+    e $f
+  else
+    ene
+  endif
 endfunction
 
 let g:unite_source_menu_menus.utils = {
   \'description': 'utils',
 \}
 let g:unite_source_menu_menus.utils.command_candidates = [
-  \['clear vim cache', 'call ClearVimCache() | e'],
+  \['clear vim cache', 'call ClearVimCache()'],
 \]
 nnoremap <silent>[unite]u :Unite -silent -start-insert menu:utils<cr>
 " }}}

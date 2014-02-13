@@ -144,7 +144,7 @@ NeoBundle 'saghul/vim-colortoggle'
 NeoBundle 'vim-scripts/CSApprox'
 
 " one colorscheme pack to rule them all
-NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'gmist/vim-colorschemes'
 
 " Highlight several words in different colors simultaneously
 NeoBundle 'vim-scripts/Mark--Karkat'

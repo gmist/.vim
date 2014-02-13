@@ -59,6 +59,9 @@ if exists('+colorcolumn')
 endif
 set laststatus=2    " always show the status line
 set lazyredraw      " do not redraw while running macros
+set synmaxcol=150   " stop rendering syntax colors in long lines
+set ttyfast         " improves redrawing
+set ttyscroll=3     " number of lines to scroll the screen
 set showcmd         " show the command being typed
 
 " Remove gui scrollbars

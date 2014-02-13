@@ -132,6 +132,9 @@ NeoBundle 'tpope/vim-git'
 
 " enhanced javascript syntax for vim
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+
+" preview markdown documents
+NeoBundleLazy 'nelstrom/vim-markdown-preview', {'autoload':{'filetypes':['markdown']}}
 " }}}
 
 

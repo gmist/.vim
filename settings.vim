@@ -1,5 +1,13 @@
-" set syntax
-syntax on                   " syntax highlighting on
+" set syntax and colorscheme
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  set t_Co=256 " number of colors
+  let g:solarized_termcolors=256
+endif
+
+if &t_Co > 2 || has("gui_running")
+  syntax on                 " syntax highlighting on
+endif
+
 filetype on                 " try to detect filetypes
 filetype plugin indent on   " load filetype plugins/indent settings
 
@@ -92,13 +100,6 @@ set matchpairs+=<:> " Match < > brackets too
 set matchtime=1     " how many tenths of a second to blink matching brackets
 set shiftround      " when at 3 spaces, and I hit > ... go to 4, not 5
 
-
-" color scheme
-syntax enable
-if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-  set t_Co=256 " number of colors
-  let g:solarized_termcolors=256
-endif
 
 " set the cursor to a vertical line in insert mode and a solid block
 " in command mode

@@ -173,9 +173,6 @@ augroup END
 augroup autoit
   au FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
   au BufWinEnter * if getfsize(expand("%")) > 1000000 | syntax clear | endif
-
-  au BufWinLeave * silent! mkview
-  au BufWinEnter * silent! loadview
 augroup END
 
 " python syntax

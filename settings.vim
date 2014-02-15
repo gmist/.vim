@@ -6,6 +6,7 @@ endif
 
 if &t_Co > 2 || has("gui_running")
   syntax on                 " syntax highlighting on
+  syntax sync minlines=256
 endif
 
 filetype on                 " try to detect filetypes
@@ -31,8 +32,7 @@ set termencoding=utf-8
 setlocal spell spelllang=
 setlocal nospell
 
-set history=100000  " give me more history
-set synmaxcol=500   " don't try to highlight lines longer than 500 characters
+set history=10000  " give me more history
 
 
 " completion ignore list
@@ -67,10 +67,11 @@ if exists('+colorcolumn')
 endif
 set laststatus=2    " always show the status line
 set lazyredraw      " do not redraw while running macros
-set synmaxcol=180   " stop rendering syntax colors in long lines
+set synmaxcol=500   " don't try to highlight lines longer than 500 characters
 set ttyfast         " improves redrawing
 set ttyscroll=3     " number of lines to scroll the screen
 set showcmd         " show the command being typed
+set scrolljump=5    " number of lines to scroll when the cursor gets off screen
 
 " Remove gui scrollbars
 set guioptions+=LlRrb
@@ -126,8 +127,6 @@ if has('folding')
   set foldmethod=marker " fold on marker / indent, syntax
   set foldlevel=999
 endif
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
 
 
 " better completion
@@ -173,6 +172,10 @@ augroup END
 
 augroup autoit
   au FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+  au BufWinEnter * if getfsize(expand("%")) > 1000000 | syntax clear | endif
+
+  au BufWinLeave * silent! mkview
+  au BufWinEnter * silent! loadview
 augroup END
 
 " python syntax

@@ -175,7 +175,7 @@ augroup autoit
   au BufWinEnter * if getfsize(expand("%")) > 1000000 | syntax clear | endif
 
   " use absolute line numbers in insert mode and relative numbers in normal mode
-  au InsertEnter * :set norelativenumber
+  au InsertEnter * :set norelativenumber number
   au InsertLeave * :set relativenumber
 augroup END
 

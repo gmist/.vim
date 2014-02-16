@@ -173,6 +173,10 @@ augroup END
 augroup autoit
   au FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
   au BufWinEnter * if getfsize(expand("%")) > 1000000 | syntax clear | endif
+
+  " use absolute line numbers in insert mode and relative numbers in normal mode
+  au InsertEnter * :set norelativenumber
+  au InsertLeave * :set relativenumber
 augroup END
 
 " python syntax

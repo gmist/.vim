@@ -55,8 +55,6 @@ set wildignore+=.idea                            " IntellyJ IDE work dir
 
 " GUI settings
 set guifont=Monaco:h12      " set font
-set relativenumber          " use relative number
-set number                  " show line numbers
 set guioptions-=m           " remove menu bar
 set guioptions-=T           " remove toolbar
 set completeopt=menuone     " don't use a pop up menu for completions
@@ -175,6 +173,7 @@ augroup autoit
   au BufWinEnter * if getfsize(expand("%")) > 1000000 | syntax clear | endif
 
   " use absolute line numbers in insert mode and relative numbers in normal mode
+  au BufWinEnter * :set relativenumber
   au InsertEnter * :set norelativenumber number
   au InsertLeave * :set relativenumber
 augroup END

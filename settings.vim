@@ -55,7 +55,7 @@ set wildignore+=.idea                            " IntellyJ IDE work dir
 
 " GUI settings
 set guifont=Monaco:h12      " set font
-set rnu                     " use relative number
+set relativenumber          " use relative number
 set number                  " show line numbers
 set guioptions-=m           " remove menu bar
 set guioptions-=T           " remove toolbar

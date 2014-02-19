@@ -83,8 +83,7 @@ set nohidden        " remove the buffer when close tab
 set cursorline      " highlight current line
 set cursorcolumn    " highlight cursor column
 hi! link CursorColumn CursorLine
-set noerrorbells    " don't make noise
-set novisualbell    " don't blink
+set noeb vb t_vb=   " don't make noise
 
 " search
 set path=.,,**

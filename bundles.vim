@@ -156,6 +156,7 @@ NeoBundle 'vim-scripts/Mark--Karkat'
 
 " This is an implementation of TextMates Snippets for the Vim Text Editor.
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 " surround.vim: quoting/parenthesizing made simple
 NeoBundle 'tpope/vim-surround'

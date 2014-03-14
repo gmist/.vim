@@ -32,10 +32,7 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'bling/vim-airline'
 
 " File explorer
-NeoBundleLazy 'Shougo/vimfiler', {'autoload' : { 'commands' : ['VimFiler']}}
-
-" A tree explorer plugin for navigating the filesystem
-NeoBundle 'scrooloose/nerdtree'
+NeoBundleLazy 'Shougo/vimfiler', {'autoload' : { 'commands' : ['VimFiler', 'VimFilerExplorer']}}
 
 " plugin for intensely orgasmic commenting 
 NeoBundle 'scrooloose/nerdcommenter'

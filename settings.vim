@@ -226,6 +226,7 @@ map <Down> <Nop>
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+set scrolloff=3
 
 set showbreak=↪
 let mapleader="\<Space>"

@@ -45,12 +45,15 @@ set wildignore+=*.sw?                            " vim swap files
 set wildignore+=*.DS_Store                       " OSX bullshit
 set wildignore+=*.luac                           " lua byte code
 set wildignore+=migrations                       " django migrations
-set wildignore+=*.pyc                            " dython byte code
+set wildignore+=*.pyc                            " python byte code
+set wildignore+=*.pyo                            " python optimize byte code
 set wildignore+=*.orig                           " merge resolution files
 set wildignore+=*.bak                            " backup files
 set wildignore+=*.class                          " java byte code
 set wildignore+=*.rbc                            " ruby byte code
 set wildignore+=.idea                            " IntellyJ IDE work dir
+set wildignore+=node_modules/**                  " npm modules dir
+set wildignore+=bower_components/**              " bower components dir
 
 
 " GUI settings

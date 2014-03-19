@@ -32,7 +32,7 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'bling/vim-airline'
 
 " File explorer
-NeoBundleLazy 'Shougo/vimfiler', {'autoload' : { 'commands' : ['VimFiler', 'VimFilerExplorer']}}
+NeoBundle 'Shougo/vimfiler'
 
 " plugin for intensely orgasmic commenting 
 NeoBundle 'scrooloose/nerdcommenter'

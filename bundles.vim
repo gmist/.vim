@@ -173,6 +173,9 @@ NeoBundle 'ervandew/supertab'
 " zen-coding for vim
 NeoBundle 'mattn/zencoding-vim'
 
+" Context filetype library for Vim script
+NeoBundle 'Shougo/context_filetype.vim'
+
 " completion system by maintaining a cache of keywords in the current buffer
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'

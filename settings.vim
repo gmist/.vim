@@ -16,6 +16,8 @@ set backupdir=~/.vim/tmp/backup " where to put backup files
 set undodir=~/.vim/tmp/undo     " where to put undo files
 set viewdir=~/.vim/tmp/view     " location for saved views
 set noswapfile              " do not create swap files
+
+" copy and paste
 if has('unnamedplus')
   set clipboard+=unnamedplus
 else
@@ -60,7 +62,6 @@ set wildignore+=bower_components/**              " bower components dir
 set guifont=Monaco:h12      " set font
 set guioptions-=m           " remove menu bar
 set guioptions-=T           " remove toolbar
-set completeopt=menuone     " don't use a pop up menu for completions
 set mousehide               " hide the mouse cursor when typing
 set textwidth=79            " set text width for word wrapping
 if exists('+colorcolumn')
@@ -80,6 +81,7 @@ set guioptions-=LlRrb
 
 
 set nowrap          " no wrap lines
+set formatoptions-=t " disable auto-wrap text using textwidth
 set ruler           " always show current position
 set hid             " change buffer - without saving
 set nohidden        " remove the buffer when close tab    
@@ -129,8 +131,13 @@ if has('folding')
 endif
 
 
-" better completion
+" better completion:
+" Only insert the longest common text of the matches
+" Use the popup menu also when there is only one match
+" Show extra information about the currently selected completion
 set completeopt=longest,menuone,preview
+" Disable scanning include files
+set complete-=i
 
 
 " enable omni completion.
@@ -173,6 +180,9 @@ augroup END
 augroup autoit
   au FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
   au BufWinEnter * if getfsize(expand("%")) > 1000000 | syntax clear | endif
+
+  au BufWinLeave * silent! mkview
+  au BufWinEnter * silent! loadview
 
   " use absolute line numbers in insert mode and relative numbers in normal mode
   au BufWinEnter * :set relativenumber

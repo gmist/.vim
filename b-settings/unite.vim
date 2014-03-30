@@ -114,8 +114,8 @@ let g:unite_source_menu_menus.other = {
   \'description': 'other settings',
 \}
 let g:unite_source_menu_menus.other.command_candidates = [
-  \['wrap on', 'set wrap linebreak nolist'],
-  \['wrap off', 'set nowrap'],
+  \['wrap on', 'set wrap linebreak formatoptions+=t'],
+  \['wrap off', 'set nowrap formatoptions-=t'],
 \]
 nnoremap <silent>[unite]co :Unite -silent -start-insert menu:other<cr>
 " }}}

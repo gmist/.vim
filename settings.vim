@@ -24,6 +24,13 @@ else
   set clipboard+=unnamed    " share windows clipboard
 endif
 
+" alternative copy past
+"vmap <C-c> "+yi
+"vmap <C-x> "+c
+"vmap <C-v> c<ESC>"+p
+"imap <C-v> <ESC>"+pa
+
+
 " encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -82,6 +89,7 @@ set guioptions-=LlRrb
 
 set nowrap          " no wrap lines
 set formatoptions-=t " disable auto-wrap text using textwidth
+set formatoptions-=c formatoptions-=r formatoptions-=o " disable auto insert comments
 set ruler           " always show current position
 set hid             " change buffer - without saving
 set nohidden        " remove the buffer when close tab    
@@ -89,6 +97,7 @@ set cursorline      " highlight current line
 set cursorcolumn    " highlight cursor column
 hi! link CursorColumn CursorLine
 set noeb vb t_vb=   " don't make noise
+
 
 " search
 set path=.,,**

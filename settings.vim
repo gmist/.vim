@@ -249,17 +249,10 @@ map <Down> <Nop>
 
 
 " quick swith between buffers
-if has('mac')
-  nmap <D-j> :bn<CR>
-  imap <D-j> <ESC>:bn<CR>
-  nmap <D-k> :bp<CR>
-  imap <D-k> <ESC>:bp<CR>
-else
-  nmap <C-j> :bn<CR>
-  imap <C-j> <ESC>:bn<CR>
-  nmap <C-k> :bp<CR>
-  imap <C-k> <ESC>:bp<CR>
-endif
+nmap <C-j> :bn<CR>
+imap <C-j> <ESC>:bn<CR>
+nmap <C-k> :bp<CR>
+imap <C-k> <ESC>:bp<CR>
 
 
 " always delete, not cut text

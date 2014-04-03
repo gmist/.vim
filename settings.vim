@@ -199,6 +199,7 @@ augroup autoit
   au InsertLeave * :set relativenumber
 augroup END
 
+
 " python syntax
 let python_highlight_all=1
 setlocal keywordprg=pydoc
@@ -206,6 +207,7 @@ setlocal keywordprg=pydoc
 
 " yanks from cursor to the end of line
 nnoremap Y y$
+
 
 " Fix pressed Shift
 cab W! w!
@@ -216,6 +218,7 @@ cab wQ wq
 cab WQ wq
 cab W w
 cab Q q
+
 
 " Fix russian layout
 cab ц w
@@ -230,17 +233,34 @@ cab ЦЙ wq
 cab Ц w
 cab Й q
 
+
 " easy buffers navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+
 " disable arrow keys
 map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
+
+
+" quick swith between buffers
+if has('mac')
+  nmap <D-j> :bn<CR>
+  imap <D-j> <ESC>:bn<CR>
+  nmap <D-k> :bp<CR>
+  imap <D-k> <ESC>:bp<CR>
+else
+  nmap <C-j> :bn<CR>
+  imap <C-j> <ESC>:bn<CR>
+  nmap <C-k> :bp<CR>
+  imap <C-k> <ESC>:bp<CR>
+endif
+
 
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
@@ -252,8 +272,10 @@ let mapleader="\<Space>"
 let maplocalleader = ","
 nnoremap ; :
 
+
 " no switch keyboard layout for commands in normal mode.
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
 
 " improve naviation on wrapped lines
 noremap j gj

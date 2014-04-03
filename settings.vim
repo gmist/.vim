@@ -262,6 +262,11 @@ else
 endif
 
 
+" always delete, not cut text
+nnoremap d "_d
+vnoremap d "_d
+
+
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>

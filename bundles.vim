@@ -65,6 +65,11 @@ NeoBundle 'jimsei/winresizer'
 
 " allows you to visually select increasingly regions of text
 NeoBundle 'terryma/vim-expand-region'
+
+" Unload/delete/wipe a buffer, keep its window, display last accessed buffer
+NeoBundle 'vim-scripts/bufkill.vim'
+
+NeoBundle 'nathanaelkane/vim-command-w'
 " }}}
 
 

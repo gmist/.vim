@@ -1,3 +1,3 @@
-nmap <D-d> :CommandW<CR>
-imap <D-d> <ESC>:CommandW<CR>
+nmap <D-ESC> :CommandW<CR>
+imap <D-ESC> <ESC>:CommandW<CR>
 

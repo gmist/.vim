@@ -248,11 +248,13 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 
-" quick swith between buffers
-nmap <D-j> :bn<CR>
-imap <D-j> <ESC>:bn<CR>
-nmap <D-k> :bp<CR>
-imap <D-k> <ESC>:bp<CR>
+" quick swith between buffers and close it
+nmap <D-j> :bn<cr>
+imap <D-j> <ESC>:bn<cr>
+nmap <D-k> :bp<cr>
+imap <D-k> <ESC>:bp<cr>
+nmap <D-ESC> :q<cr>
+imap <D-ESC> <ESC>:q<cr>
 
 
 " always delete, not cut text

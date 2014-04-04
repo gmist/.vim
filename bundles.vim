@@ -62,6 +62,7 @@ endif
 
 " very simple vim plugin for easy resizing of your vim windows
 NeoBundle 'jimsei/winresizer'
+let g:winresizer_start_key = '<C-R>'
 
 " allows you to visually select increasingly regions of text
 NeoBundle 'terryma/vim-expand-region'

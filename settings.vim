@@ -17,18 +17,13 @@ set undodir=~/.vim/tmp/undo     " where to put undo files
 set viewdir=~/.vim/tmp/view     " location for saved views
 set noswapfile              " do not create swap files
 
+
 " copy and paste
 if has('unnamedplus')
   set clipboard+=unnamedplus
 else
   set clipboard+=unnamed    " share windows clipboard
 endif
-
-" alternative copy past
-"vmap <C-c> "+yi
-"vmap <C-x> "+c
-"vmap <C-v> c<ESC>"+p
-"imap <C-v> <ESC>"+pa
 
 
 " encoding
@@ -82,6 +77,7 @@ set ttyscroll=3     " number of lines to scroll the screen
 set showcmd         " show the command being typed
 set scrolljump=5    " number of lines to scroll when the cursor gets off screen
 
+
 " Remove gui scrollbars
 set guioptions+=LlRrb
 set guioptions-=LlRrb
@@ -126,6 +122,7 @@ let &t_EI = "\<Esc>[2 q"
 "\e[6 q"  steady line 
 autocmd InsertEnter,InsertLeave * set cul!
 set gcr=n:blinkon0 " don't blink in normal mode
+
 
 " upon hitting escape to change modes,
 " send successive move-left and move-right

@@ -85,7 +85,6 @@ set guioptions-=LlRrb
 
 set nowrap          " no wrap lines
 set formatoptions-=t " disable auto-wrap text using textwidth
-set formatoptions-=c formatoptions-=r formatoptions-=o " disable auto insert comments
 set ruler           " always show current position
 set hid             " change buffer - without saving
 set nohidden        " remove the buffer when close tab    
@@ -194,6 +193,9 @@ augroup autoit
   au BufWinEnter * :set relativenumber
   au InsertEnter * :set norelativenumber number
   au InsertLeave * :set relativenumber
+ 
+  " disable auto insert comments
+  au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 augroup END
 
 

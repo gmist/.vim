@@ -261,6 +261,8 @@ map <Down> <Nop>
 " quick swith between buffers
 nmap <S-Tab> :bn<CR>
 imap <S-Tab> <ESC>:bn<CR>
+nmap <C-S-Tab> :bp<CR>
+imap <C-S-Tab> <ESC>:bp<CR>
 
 
 " scroll the viewport faster

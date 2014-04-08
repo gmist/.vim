@@ -263,6 +263,8 @@ nmap <S-Tab> :bn<CR>
 imap <S-Tab> <ESC>:bn<CR>
 nmap <C-S-Tab> :bp<CR>
 imap <C-S-Tab> <ESC>:bp<CR>
+nmap <C-c> :bd<CR>
+imap <C-c> <ESC>:bd<CR>
 
 
 " scroll the viewport faster

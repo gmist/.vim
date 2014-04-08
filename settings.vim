@@ -206,6 +206,17 @@ setlocal keywordprg=pydoc
 
 " yanks from cursor to the end of line
 nnoremap Y y$
+vnoremap Y y$
+
+
+" always delete, not cut text
+nnoremap d "_d
+vnoremap d "_d
+
+
+" cut current line
+nnoremap X dd
+vnoremap X dd
 
 
 " Fix pressed Shift
@@ -250,11 +261,6 @@ map <Down> <Nop>
 " quick swith between buffers
 nmap <S-Tab> :bn<CR>
 imap <S-Tab> <ESC>:bn<CR>
-
-
-" always delete, not cut text
-nnoremap d "_d
-vnoremap d "_d
 
 
 " scroll the viewport faster

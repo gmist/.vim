@@ -163,18 +163,11 @@ NeoBundle 'vim-scripts/Mark--Karkat'
 
 " Snippets and autocomplete plugins {{{
 
-" This is an implementation of TextMates Snippets for the Vim Text Editor.
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-
 " surround.vim: quoting/parenthesizing made simple
 NeoBundle 'tpope/vim-surround'
 
 " Markdown syntax highlight for Vim editor with snippets support
 NeoBundleLazy 'gmarik/vim-markdown', {'autoload':{'filetypes':['markdown']}}
-
-" Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs
-NeoBundle 'ervandew/supertab'
 
 " zen-coding for vim
 NeoBundle 'mattn/zencoding-vim'
@@ -185,6 +178,12 @@ NeoBundle 'Shougo/context_filetype.vim'
 " completion system by maintaining a cache of keywords in the current buffer
 if has('lua')
   NeoBundle 'Shougo/neocomplete.vim'
+
+  " Neosnippet plug-In adds snippet support to Vim
+  NeoBundle 'Shougo/neosnippet'
+
+  " The standard snippets repository for neosnippet
+  NeoBundle 'Shougo/neosnippet-snippets'
 endif
 
 " editorConfig plugin for Vim

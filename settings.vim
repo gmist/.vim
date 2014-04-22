@@ -209,14 +209,11 @@ nnoremap Y y$
 vnoremap Y y$
 
 
-" always delete, not cut text
-nnoremap d "_d
-vnoremap d "_d
-
-
-" cut current line
-nnoremap X dd
-vnoremap X dd
+" delete symbols and strings
+nnoremap x "_x
+vnoremap x "_x
+noremap X "_dd
+vnoremap X "_dd
 
 
 " Fix pressed Shift

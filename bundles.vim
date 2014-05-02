@@ -169,7 +169,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundleLazy 'gmarik/vim-markdown', {'autoload':{'filetypes':['markdown']}}
 
 " zen-coding for vim
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 
 " Context filetype library for Vim script
 NeoBundle 'Shougo/context_filetype.vim'

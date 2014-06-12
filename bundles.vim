@@ -140,6 +140,9 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascr
 
 " preview markdown documents
 NeoBundleLazy 'nelstrom/vim-markdown-preview', {'autoload':{'filetypes':['markdown']}}
+
+" Swift support - covers syntax, intenting, and more
+NeoBundle 'toyamarinyon/vim-swift'
 " }}}
 
 

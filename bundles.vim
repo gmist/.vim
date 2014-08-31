@@ -168,8 +168,8 @@ NeoBundle 'vim-scripts/Mark--Karkat'
 " surround.vim: quoting/parenthesizing made simple
 NeoBundle 'tpope/vim-surround'
 
-" Markdown syntax highlight for Vim editor with snippets support
-NeoBundleLazy 'gmarik/vim-markdown', {'autoload':{'filetypes':['markdown']}}
+" Markdown syntax, matching rules and mappings
+NeoBundleLazy 'plasticboy/vim-markdown', {'autoload':{'filetypes':['markdown']}}
 
 " zen-coding for vim
 NeoBundle 'mattn/emmet-vim'

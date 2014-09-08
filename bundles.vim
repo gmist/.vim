@@ -143,6 +143,9 @@ NeoBundleLazy 'nelstrom/vim-markdown-preview', {'autoload':{'filetypes':['markdo
 
 " Swift support - covers syntax, intenting, and more
 NeoBundle 'toyamarinyon/vim-swift'
+
+" support for Rust file detection and syntax highlighting
+NeoBundle 'wting/rust.vim'
 " }}}
 
 

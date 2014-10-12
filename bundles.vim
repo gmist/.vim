@@ -146,6 +146,9 @@ NeoBundle 'toyamarinyon/vim-swift'
 
 " support for Rust file detection and syntax highlighting
 NeoBundle 'wting/rust.vim'
+
+" Syntax highlighting for Stylus 
+NeoBundle 'wavded/vim-stylus'
 " }}}
 
 

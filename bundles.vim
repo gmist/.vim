@@ -149,6 +149,9 @@ NeoBundle 'wting/rust.vim'
 
 " Syntax highlighting for Stylus 
 NeoBundle 'wavded/vim-stylus'
+
+" plugin that highlights all the occurrences of the word under your cursor
+NeoBundle 'vasconcelloslf/vim-interestingwords'
 " }}}
 
 

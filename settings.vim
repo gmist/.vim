@@ -258,6 +258,7 @@ map <Down> <Nop>
 " quick swith between buffers
 map ∆ :bp!<CR>
 map ˚ :bn!<CR>
+map љ :bn!<CR>
 map ç :bd<CR>
 
 

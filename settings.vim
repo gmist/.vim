@@ -262,6 +262,12 @@ map љ :bn!<CR>
 map ç :bd<CR>
 
 
+" quick split windows
+map ∑ <C-w>c
+map ß <C-w>s
+map √ <C-w>v
+
+
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>

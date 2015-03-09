@@ -256,9 +256,9 @@ map <Down> <Nop>
 
 
 " quick swith between buffers
-noremap <C-]> :bn<CR>
-noremap <C-[> :bp<CR>
-noremap <C-c> :bd<CR>
+map ∆ :bp!<CR>
+map ˚ :bn!<CR>
+map ç :bd<CR>
 
 
 " scroll the viewport faster

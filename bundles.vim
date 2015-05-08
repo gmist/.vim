@@ -1,5 +1,7 @@
 " Unite plugins {{{
 
+call neobundle#begin()
+
 " asynchronously run commands in Unite
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -238,4 +240,6 @@ if first_init_neobundle == 1
   :qa
 endif
 " }}}
+
+call neobundle#end()
 

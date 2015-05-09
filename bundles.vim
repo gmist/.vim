@@ -1,6 +1,10 @@
-" Unite plugins {{{
+" Plugins {{{
 
-call neobundle#begin()
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " asynchronously run commands in Unite
 NeoBundle 'Shougo/vimproc.vim', {

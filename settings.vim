@@ -259,7 +259,7 @@ map <Down> <Nop>
 map ∆ :bp!<CR>
 map ˚ :bn!<CR>
 map љ :bn!<CR>
-map ç :bd<CR>
+map œ :bd<CR>
 
 
 " quick split windows

@@ -290,3 +290,7 @@ noremap о gj
 noremap л gk
 
 nnoremap <CR> :noh<CR><CR> " unsets the "search" by hitting return
+
+" Forced save RO files
+cmap w!! w !sudo tee % >/dev/null
+

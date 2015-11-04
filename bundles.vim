@@ -76,6 +76,8 @@ NeoBundle 'terryma/vim-expand-region'
 " Unload/delete/wipe a buffer, keep its window, display last accessed buffer
 NeoBundle 'vim-scripts/bufkill.vim'
 
+" front for ag, A.K.A. the_silver_searcher
+NeoBundle 'rking/ag.vim'
 " }}}
 
 

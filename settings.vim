@@ -273,7 +273,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 set scrolloff=3
 
-set showbreak=↪
+set showbreak=↳
 let mapleader="\<Space>"
 let maplocalleader = ","
 nnoremap ; :

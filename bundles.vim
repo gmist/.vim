@@ -91,6 +91,12 @@ NeoBundle 'jmcantrell/vim-virtualenv'
 
 " }}}
 
+" Go plugins {{{
+" Go (golang) support for Vim
+NeoBundle 'fatih/vim-go'
+
+" }}}
+
 
 " Syntax and highlighting plugins {{{
 

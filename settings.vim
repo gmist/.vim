@@ -180,6 +180,9 @@ augroup filetypedetect
   " python
   au FileType python set sw=4 sts=4 
 
+  " golang
+  au FileType go set sw=4 sts=4 ts=4
+
 augroup END
 
 augroup autoit

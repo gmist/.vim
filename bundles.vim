@@ -78,6 +78,9 @@ NeoBundle 'vim-scripts/bufkill.vim'
 
 " front for ag, A.K.A. the_silver_searcher
 NeoBundle 'rking/ag.vim'
+
+" fuzzy finder (https://github.com/junegunn/fzf)
+set rtp+=/usr/local/opt/fzf
 " }}}
 
 
@@ -243,7 +246,6 @@ NeoBundle 'vim-scripts/DirDiff.vim'
 NeoBundleLazy 'vim-scripts/hexman.vim', { 'autoload' :
             \ { 'mappings' : [['ni', '<Plug>HexManager']]}}
 " }}}
-
 
 " inital install bundles {{{
 if first_init_neobundle == 1

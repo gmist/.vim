@@ -181,7 +181,7 @@ augroup filetypedetect
   au FileType python set sw=4 sts=4 
 
   " golang
-  au FileType go set sw=4 sts=4 ts=4
+  au FileType go set sw=2 sts=2 ts=2
 
 augroup END
 

@@ -169,6 +169,9 @@ NeoBundle 'wavded/vim-stylus'
 
 " plugin that highlights all the occurrences of the word under your cursor
 NeoBundle 'vasconcelloslf/vim-interestingwords'
+
+" syntax for TOML
+NeoBundle 'cespare/vim-toml'
 " }}}
 
 

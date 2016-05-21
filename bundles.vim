@@ -176,6 +176,10 @@ NeoBundle 'vasconcelloslf/vim-interestingwords'
 
 " syntax for TOML
 NeoBundle 'cespare/vim-toml'
+
+" easy to quickly switch between color schemes
+NeoBundle 'xolox/vim-colorscheme-switcher', {'depends': ['xolox/vim-misc']}
+let g:colorscheme_switcher_define_mappings = 1
 " }}}
 
 
@@ -232,8 +236,9 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'tpope/vim-fugitive'
 
 " Git viewer (a 'gitk clone')
-NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'],
-            \ 'autoload':{'commands':'Gitv'}}
+NeoBundleLazy 'gregsexton/gitv', {
+      \'depends':['tpope/vim-fugitive'],
+      \ 'autoload':{'commands':'Gitv'}}
 
 " mercenary.vim may very well be the worst Mercurial wrapper of all time
 NeoBundle 'phleet/vim-mercenary'

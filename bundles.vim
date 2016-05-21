@@ -20,10 +20,11 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 
 " plugin to find/open files easily, using locate command
-NeoBundleLazy 'ujihisa/unite-locate', {'autoload':{'unite_sources': 'locate'}}
+NeoBundle 'ujihisa/unite-locate'
 
 " provides your Vim's buffer with the outline view
-NeoBundleLazy 'Shougo/unite-outline', {'autoload': {'unite_sources': 'outline'}}
+NeoBundle 'Shougo/unite-outline'
+
 " }}}
 
 

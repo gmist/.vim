@@ -25,6 +25,9 @@ NeoBundle 'ujihisa/unite-locate'
 " provides your Vim's buffer with the outline view
 NeoBundle 'Shougo/unite-outline'
 
+" plugin for changing your colorscheme
+NeoBundle 'ujihisa/unite-colorscheme'
+
 " }}}
 
 

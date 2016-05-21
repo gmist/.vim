@@ -89,7 +89,7 @@ set ruler           " always show current position
 set hid             " change buffer - without saving
 set nohidden        " remove the buffer when close tab    
 set cursorline      " highlight current line
-set cursorcolumn    " highlight cursor column
+"set cursorcolumn    " highlight cursor column
 hi! link CursorColumn CursorLine
 set noeb vb t_vb=   " don't make noise
 

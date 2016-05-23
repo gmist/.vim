@@ -177,9 +177,6 @@ NeoBundle 'vasconcelloslf/vim-interestingwords'
 " syntax for TOML
 NeoBundle 'cespare/vim-toml'
 
-" easy to quickly switch between color schemes
-NeoBundle 'xolox/vim-colorscheme-switcher', {'depends': ['xolox/vim-misc']}
-let g:colorscheme_switcher_define_mappings = 1
 " }}}
 
 
@@ -187,6 +184,10 @@ let g:colorscheme_switcher_define_mappings = 1
 
 " Color toggling plugin for ViM
 NeoBundle 'saghul/vim-colortoggle'
+
+" easy to quickly switch between color schemes
+NeoBundle 'xolox/vim-colorscheme-switcher', {'depends': ['xolox/vim-misc']}
+let g:colorscheme_switcher_define_mappings = 1
 
 " This plugin makes GVim-only colorschemes Just Work in terminal Vim
 NeoBundle 'vim-scripts/CSApprox'

@@ -69,9 +69,6 @@ fi
 
 git clone https://github.com/gmist/.vim.git ~/.vim
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 echo
 read -p "Install spell checker dictionaries? (y/n): " RESP
 if [ "$RESP" = "y" ]; then

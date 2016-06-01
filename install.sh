@@ -8,7 +8,7 @@ delete_vim_files(){
 create_vim_files(){
   echo "Creating '$HOME/.vimrc' file and '$HOME/.vim' directory"
   touch ~/.vimrc
-  echo "source $HOME/.vim/init.vim" >> ~/.vimrc
+  echo "source ~/.vim/init.vim" >> ~/.vimrc
   mkdir ~/.vim
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

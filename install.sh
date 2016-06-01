@@ -60,14 +60,15 @@ else
   fi
 fi
 
-if [! -d ~/.config/nvim ]; then
-  if [! -d ~/.config ]; then
+if [ ! -d ~/.config/nvim ]; then
+  if [ ! -d ~/.config ]; then
     mkdir ~/.confg 
   fi
   ln -s ~/.vim ~/.config/nvim
 fi
 
 git clone https://github.com/gmist/.vim.git ~/.vim
+
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 

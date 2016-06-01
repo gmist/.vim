@@ -1,4 +1,5 @@
-bundle/*
+autoload/*
+plugged/*
 view/*
 spell/*
 tmp/*

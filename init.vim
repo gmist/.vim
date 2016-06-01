@@ -1,23 +1,12 @@
-" NeoBundle init {{{
-filetype off " required!
-
-" Auto installing NeoBundle
-let first_init_neobundle=0
-let neobundle_readme=expand($HOME.'/.vim/bundle/neobundle.vim/README.md')
-if !filereadable(neobundle_readme)
-  echo "Installing NeoBundle.."
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-  let first_init_neobundle=1
+let first_init_plug=0
+let plug_manager_file=expand('~/.vim/autoload/plug.vim')
+if !filereadable(plug_manager_file)
+  echo "Installing Vim plugin manager"
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  let first_init_plug=1
 endif
 
-if has('vim_starting')
- set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
-" }}}
-
+source ~/.vim/base.vim
+source ~/.vim/plug.vim
+source ~/.vim/keys.vim
+source ~/.vim/indent.vim

@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-
 delete_vim_files(){
   echo "Removing '$HOME/.vimrc' file and '$HOME/.vim' directory"
   rm -rf ~/.vim ~/.vimrc
 }
 
-
 create_vim_files(){
   echo "Creating '$HOME/.vimrc' file and '$HOME/.vim' directory"
   touch ~/.vimrc
-  echo "source $HOME/.vim/rc.vim" >> ~/.vimrc
+  echo "source $HOME/.vim/init.vim" >> ~/.vimrc
   mkdir ~/.vim
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 
@@ -38,6 +38,16 @@ else
 fi
 
 
+echo "Check curl..."
+which curl > /dev/null
+if [ "$?" != "0" ]; then
+  echo "Oops... curl was not found, install it before"
+  exit 1
+else
+  echo "Ok"
+fi
+
+
 if [ ! -f ~/.vimrc ] && [ ! -d ~/.vim ]; then
   create_vim_files
 else
@@ -52,9 +62,14 @@ else
   fi
 fi
 
+if [! -d ~/.config/nvim ]; then
+  if [! -d ~/.config ]; then
+    mkdir ~/.confg 
+  fi
+  ln -s ~/.vim ~/.config/nvim
+fi
 
 git clone https://github.com/gmist/.vim.git ~/.vim
-
 
 echo
 read -p "Install spell checker dictionaries? (y/n): " RESP
@@ -87,12 +102,6 @@ fi
 if [ ! -d ~/.vim/tmp/undo ]; then
   echo "Creating undo dir ('$HOME/.vim/tmp/undo')"
   mkdir -p ~/.vim/tmp/undo
-fi
-
-
-if [ ! -d ~/.vim/tmp/neocomplete ]; then
-  echo "Creating neocomplete dir ('$HOME/.vim/tmp/neocomplete')"
-  mkdir -p ~/.vim/tmp/neocomplete
 fi
 
 

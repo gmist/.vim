@@ -19,6 +19,7 @@ set cursorline      " highlight current line
 set scrolljump=5    " number of lines to scroll when the cursor gets off screen
 
 set noswapfile      " do not create swap files
+set noeb vb t_vb=   " disable beeps
 
 augroup autoit
   " use absolute line numbers in insert mode and relative numbers in normal mode
@@ -65,18 +66,18 @@ if !has("nvim")
   if &t_Co > 2 || has("gui_running")
     syntax on " syntax highlighting on
   endif
-  
+
   " set the cursor to a vertical line in insert mode and a solid block
   " in command mode
   let &t_SI = "\<Esc>[5 q"
   let &t_EI = "\<Esc>[2 q"
-  "\e[0 q"  default 
-  "\e[1 q"  blinking block 
-  "\e[2 q"  steady block 
-  "\e[3 q"  blinking underscore 
-  "\e[4 q"  steady underscore 
-  "\e[5 q"  blinking line 
-  "\e[6 q"  steady line 
+  "\e[0 q"  default
+  "\e[1 q"  blinking block
+  "\e[2 q"  steady block
+  "\e[3 q"  blinking underscore
+  "\e[4 q"  steady underscore
+  "\e[5 q"  blinking line
+  "\e[6 q"  steady line
   autocmd InsertEnter,InsertLeave * set cul!
   set gcr=n:blinkon0 " don't blink in normal mode
 endif

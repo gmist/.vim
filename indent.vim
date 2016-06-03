@@ -2,8 +2,8 @@
 augroup filetypedetect
 
   " django templates
-  au BufNewFile,BufRead *.jinja2 set filetype=htmldjango
-  au BufNewFile,BufRead *.html set filetype=htmldjango
+  au BufNewFile,BufRead *.jinja2 set filetype=jinja2
+  au BufNewFile,BufRead *.html set filetype=jinja2
 
   " vagrant file
   au BufNewFile,BufRead Vagrantfile set filetype=ruby

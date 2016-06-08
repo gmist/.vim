@@ -64,8 +64,8 @@ Plug 'valloric/MatchTagAlways'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" plugin for the_silver_searcher
-Plug 'Numkil/ag.nvim'
+" plugin for the Perl module / CLI script 'ack'
+Plug 'mileszs/ack.vim'
 
 " }}} end search plugins
 

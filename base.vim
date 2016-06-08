@@ -8,6 +8,7 @@ set path=.,,**
 set hlsearch        " highlight searched text
 set incsearch       " incremental searches
 
+set confirm         " asking if you wish to save changed files
 set ignorecase      " case insensitive by default
 set smartcase       " if there are caps, go case-sensitive
 set showmatch       " Show matching brackets

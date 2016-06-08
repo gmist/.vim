@@ -41,12 +41,6 @@ nnoremap <C-q> <C-w>c
 nnoremap <C-w>v <C-w>v<C-w>l
 nnoremap <C-w>s <C-w>s<C-w>j
 
-" quick resize splits
-nnoremap <C-Left> :vertical resize-10<CR>:<backspace>
-nnoremap <C-Up> :resize+5<CR>:<backspace>
-nnoremap <C-Down> :resize-5<CR>:<backspace>
-nnoremap <C-Right> :vertical resize+10<CR>:<backspace>
-
 
 " quick navigation between buffers
 map ∆ :bp!<CR>:<backspace>

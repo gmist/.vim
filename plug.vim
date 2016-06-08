@@ -9,6 +9,10 @@ endfunction
 " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline'
 
+" plugin for easy resizing of your vim windows
+Plug 'simeji/winresizer'
+let g:winresizer_start_key = '<C-R>'
+
 " }}} end tools plugins
 
 

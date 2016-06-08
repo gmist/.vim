@@ -13,8 +13,10 @@ set ignorecase      " case insensitive by default
 set smartcase       " if there are caps, go case-sensitive
 set showmatch       " Show matching brackets
 set matchpairs+=<:> " Match < > brackets too
-set matchtime=1     " how many tenths of a second to blink matching brackets
+set matchtime=2     " how many tenths of a second to blink matching brackets
 set shiftround      " when at 3 spaces, and I hit > ... go to 4, not 5
+set nowrap          " dont wrap lines
+set backspace=indent,eol,start " More powerful backspacing
 
 set laststatus=2    " always show the status line
 set cursorline      " highlight current line

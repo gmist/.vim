@@ -61,8 +61,8 @@ Plug 'valloric/MatchTagAlways'
 " search plugins {{{
 
 " plugin for fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+set rtp+=/usr/local/opt/fzf
 
 " plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'

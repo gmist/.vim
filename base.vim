@@ -55,6 +55,10 @@ set wildignore+=bower_components/**              " bower components dir
 
 set completeopt=longest,menuone
 
+" no switch keyboard layout for commands in normal mode.
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
+
 "MacVim-specific configurations
 if has("gui_macvim") || has("gui_vimr")
   set imd

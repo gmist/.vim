@@ -1,2 +1,2 @@
 nnoremap <silent> <F8> :NextColorScheme<CR>
-nnoremap <silent> <A-F8> :PrevColorScheme<CR>
+nnoremap <silent> <S-F8> :PrevColorScheme<CR>

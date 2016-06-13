@@ -13,13 +13,13 @@ if exists(':tnoremap')
 endif
 
 " new terminal in the current pane
-nnoremap \t :e term://zsh<CR>i<CR>
+nnoremap \t :e term://zsh<CR>i
 
 " new terminal in a vertical split pane
-nnoremap \tv <C-w>v<C-w>l :e term://zsh<CR>i<Cr>
+nnoremap \tv <C-w>v<C-w>l :e term://zsh<CR>i
 
 " new terminal in a horizontal split pane
-nnoremap \ts <C-w>s<C-w>j :e term://zsh<CR>i<CR>
+nnoremap \ts <C-w>s<C-w>j :e term://zsh<CR>i
 
 
 " quick navigation between splits
@@ -28,7 +28,8 @@ if exists(':tnoremap')
   tnoremap <C-j> <C-\><C-n><C-w>j
   tnoremap <C-k> <C-\><C-n><C-w>k
   tnoremap <C-l> <C-\><C-n><C-w>l
-  tnoremap <C-q> <C-w>c
+  tnoremap <C-q> <C-\><C-n><C-w>c
+  tnoremap œ <C-\><C-n><C-w>c
 endif
 
 nnoremap <C-H> <C-w>h
@@ -41,12 +42,16 @@ nnoremap <C-q> <C-w>c
 nnoremap <C-w>v <C-w>v<C-w>l
 nnoremap <C-w>s <C-w>s<C-w>j
 
+nnoremap \wv <C-w>v<C-w>l
+nnoremap \ws <C-w>s<C-w>j
+nnoremap \wq <C-w>c
+
 
 " quick navigation between buffers
-map ∆ :bp!<CR>:<backspace>
-map ˚ :bn!<CR>:<backspace>
-map љ :bn!<CR>:<backspace>
-map œ :bd<CR>:<backspace>
+nmap ∆ :bp!<CR>:<backspace>
+nmap ˚ :bn!<CR>:<backspace>
+nmap љ :bn!<CR>:<backspace>
+nmap œ <C-w>c
 nnoremap ¬ gt
 nnoremap ˙ gT
 

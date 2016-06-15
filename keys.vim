@@ -29,7 +29,7 @@ if exists(':tnoremap')
   tnoremap <C-k> <C-\><C-n><C-w>k
   tnoremap <C-l> <C-\><C-n><C-w>l
   tnoremap <C-q> <C-\><C-n><C-w>c
-  tnoremap œ <C-\><C-n><C-w>c
+  tnoremap œ <C-\><C-n>:bd!<CR>:<backspace>
 endif
 
 nnoremap <C-H> <C-w>h
@@ -42,16 +42,18 @@ nnoremap <C-q> <C-w>c
 nnoremap <C-w>v <C-w>v<C-w>l
 nnoremap <C-w>s <C-w>s<C-w>j
 
+nnoremap \wo <C-w>o
 nnoremap \wv <C-w>v<C-w>l
 nnoremap \ws <C-w>s<C-w>j
-nnoremap \wq <C-w>c
+nnoremap \wq :bd!<CR>:<backspace>
+nnoremap \ww :bd<CR>:<backspace>
 
 
 " quick navigation between buffers
 nmap ∆ :bp!<CR>:<backspace>
 nmap ˚ :bn!<CR>:<backspace>
 nmap љ :bn!<CR>:<backspace>
-nmap œ <C-w>c
+nmap œ :bd<CR>:<backspace>
 nnoremap ¬ gt
 nnoremap ˙ gT
 

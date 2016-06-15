@@ -45,8 +45,10 @@ nnoremap <C-w>s <C-w>s<C-w>j
 nnoremap \wo <C-w>o
 nnoremap \wv <C-w>v<C-w>l
 nnoremap \ws <C-w>s<C-w>j
-nnoremap \wq :bd!<CR>:<backspace>
-nnoremap \ww :bd<CR>:<backspace>
+nnoremap \wq :bd<CR>:<backspace>
+nnoremap \wqq :bd!<CR>:<backspace>
+nnoremap \ww :Bclose<CR>:<backspace>
+nnoremap \www :Bclose!<CR>:<backspace>
 
 
 " quick navigation between buffers
@@ -54,6 +56,7 @@ nmap ∆ :bp!<CR>:<backspace>
 nmap ˚ :bn!<CR>:<backspace>
 nmap љ :bn!<CR>:<backspace>
 nmap œ :bd<CR>:<backspace>
+nmap ∑ :Bclose<CR>:<backspace>
 nnoremap ¬ gt
 nnoremap ˙ gT
 

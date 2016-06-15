@@ -13,6 +13,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'simeji/winresizer'
 let g:winresizer_start_key = '<C-R>'
 
+" Light your buffers up
+Plug 'Soares/butane.vim'
+
 " }}} end tools plugins
 
 
@@ -36,6 +39,9 @@ Plug 'editorconfig/editorconfig-vim'
 
 " A code-completion engine
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+" alignment plugin
+Plug 'junegunn/vim-easy-align'
 
 " }}} end navigation plugins
 

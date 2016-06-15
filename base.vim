@@ -63,6 +63,7 @@ set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁ
 if has("gui_macvim") || has("gui_vimr")
   set imd
   set guifont=Monaco:h12
+  set guioptions-=r
 endif
 
 if !has("nvim")

@@ -62,7 +62,7 @@ fi
 
 if [ ! -d ~/.config/nvim ]; then
   if [ ! -d ~/.config ]; then
-    mkdir ~/.confg 
+    mkdir ~/.confg
   fi
   ln -s ~/.vim ~/.config/nvim
 fi
@@ -88,24 +88,6 @@ if [ "$RESP" = "y" ]; then
   curl ftp://ftp.vim.org/pub/vim/runtime/spell/ru.koi8-r.sug > ~/.vim/spell/ru.koi8-r.sug
   curl ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl > ~/.vim/spell/ru.utf-8.spl
   curl ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug > ~/.vim/spell/ru.utf-8.sug
-fi
-
-
-if [ ! -d ~/.vim/tmp/backup ]; then
-  echo "Creating backup dir ('$HOME/.vim/tmp/backup')"
-  mkdir -p ~/.vim/tmp/backup
-fi
-
-
-if [ ! -d ~/.vim/tmp/undo ]; then
-  echo "Creating undo dir ('$HOME/.vim/tmp/undo')"
-  mkdir -p ~/.vim/tmp/undo
-fi
-
-
-if [ ! -d ~/.vim/tmp/view ]; then
-  echo "Creating view dir ('$HOME/.vim/tmp/view')"
-  mkdir -p ~/.vim/tmp/view
 fi
 
 vim

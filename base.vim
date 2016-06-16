@@ -70,6 +70,7 @@ if !has("nvim")
   if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
     set t_Co=256 " number of colors
     let g:solarized_termcolors=256 " set number of colors for a solarized* themes
+    let base16colorspace=256 " access colors present in 256 colorspace
   endif
 
   if &t_Co > 2 || has("gui_running")

@@ -72,7 +72,6 @@ Plug 'valloric/MatchTagAlways'
 
 " plugin for fzf
 Plug 'junegunn/fzf.vim'
-set rtp+=/usr/local/opt/fzf
 
 " plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'

@@ -64,6 +64,9 @@ Plug 'lfv89/vim-interestingwords'
 " always highlights the enclosing html/xml tags
 Plug 'valloric/MatchTagAlways'
 
+" make gvim-only colorschemes work transparently in terminal
+Plug 'godlygeek/csapprox'
+
 " }}} end colors plugins
 
 

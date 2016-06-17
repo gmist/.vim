@@ -6,7 +6,7 @@ if !filereadable(plug_manager_file)
   let first_init_plug=1
 endif
 
-source ~/.vim/base.vim
 source ~/.vim/plug.vim
+source ~/.vim/base.vim
 source ~/.vim/keys.vim
 source ~/.vim/indent.vim

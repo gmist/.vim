@@ -25,6 +25,11 @@ Plug 'Soares/butane.vim'
 " A tree explorer plugin
 Plug 'scrooloose/nerdtree'
 
+" displays tags in a window, ordered by scope
+if executable('ctags')
+  Plug 'majutsushi/tagbar'
+endif
+
 " allows you to visually select increasingly regions of text
 Plug 'terryma/vim-expand-region'
 

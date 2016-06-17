@@ -1,5 +1,3 @@
-set nocompatible " be iMproved, explicitly get out of vi-compatible mode
-
 filetype on                 " try to detect filetypes
 filetype plugin indent on   " load filetype plugins/indent settings
 
@@ -23,7 +21,7 @@ set cursorline      " highlight current line
 set scrolljump=5    " number of lines to scroll when the cursor gets off screen
 
 set noswapfile      " do not create swap files
-set noeb vb t_vb=   " disable beeps
+set mousehide       " hide the mouse while typing
 
 augroup autoit
   " use absolute line numbers in insert mode and relative numbers in normal mode
@@ -59,23 +57,18 @@ set completeopt=longest,menuone
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 
-"MacVim-specific configurations
-if has("gui_macvim") || has("gui_vimr")
-  set imd
-  set guifont=Monaco:h12
-  set guioptions-=r
+if has("nvim") || has("gui_running") || $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  syntax on " syntax highlighting on
+  if !has("nvim")
+    set t_Co=256 " number of colors
+  endif
+  let g:solarized_termcolors=256 " set number of colors for a solarized* themes
+  let base16colorspace=256 " access colors present in 256 colorspace
 endif
 
 if !has("nvim")
-  if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-    set t_Co=256 " number of colors
-    let g:solarized_termcolors=256 " set number of colors for a solarized* themes
-    let base16colorspace=256 " access colors present in 256 colorspace
-  endif
-
-  if &t_Co > 2 || has("gui_running")
-    syntax on " syntax highlighting on
-  endif
+  set nocompatible " be iMproved, explicitly get out of vi-compatible mode
+  set noeb vb t_vb=   " disable beeps
 
   " set the cursor to a vertical line in insert mode and a solid block
   " in command mode
@@ -89,8 +82,22 @@ if !has("nvim")
   "\e[5 q"  blinking line
   "\e[6 q"  steady line
   autocmd InsertEnter,InsertLeave * set cul!
-  set gcr=n:blinkon0 " don't blink in normal mode
+  set guicursor+=n:blinkon0 " don't blink in normal mode
 endif
+
+if has("gui_running")
+  set guioptions-=r " remove right-hand scroll bar
+  set guioptions-=L " remove left-hand scroll bar
+  set guioptions-=e " disable tabs
+  set winaltkeys=no " don't use ALT to access the menu
+endif
+
+"MacVim-specific configurations
+if has("gui_macvim") || has("gui_vimr")
+  set imd
+  set guifont=Monaco:h12
+endif
+
 
 "NeoVim-specific configurations
 if has("nvim")
@@ -99,4 +106,5 @@ if has("nvim")
   " makes the cursor a pipe in insert-mode and a block in normal-mode
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   let g:solarized_termcolors=256 " set number of colors for a solarized* themes
+  let base16colorspace=256 " access colors present in 256 colorspace
 endif

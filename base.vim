@@ -14,15 +14,19 @@ set matchpairs+=<:> " Match < > brackets too
 set matchtime=2     " how many tenths of a second to blink matching brackets
 set shiftround      " when at 3 spaces, and I hit > ... go to 4, not 5
 set nowrap          " dont wrap lines
-set backspace=indent,eol,start " More powerful backspacing
+set noshowcmd       " hide the last command
+set autoread        " reload file if it has changed outside
+set backspace=indent,eol,start " more powerful backspacing
+set concealcursor=nc           " don't conceal while editing
 
 set laststatus=2    " always show the status line
 set cursorline      " highlight current line
 set scrolljump=5    " number of lines to scroll when the cursor gets off screen
+set mousehide       " hide the mouse while typing
 
 set noswapfile      " do not create swap files
 set nobackup        " don't ctreate backup files
-set mousehide       " hide the mouse while typing
+set nowb            " no backup on overwrite
 
 augroup autoit
   " use absolute line numbers in insert mode and relative numbers in normal mode

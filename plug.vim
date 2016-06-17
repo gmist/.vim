@@ -84,6 +84,9 @@ Plug 'junegunn/fzf.vim'
 " plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'
 
+" An ack.vim alternative mimics Ctrl-Shift-F
+Plug 'dyng/ctrlsf.vim'
+
 " }}} end search plugins
 
 

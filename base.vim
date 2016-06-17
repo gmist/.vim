@@ -21,6 +21,7 @@ set cursorline      " highlight current line
 set scrolljump=5    " number of lines to scroll when the cursor gets off screen
 
 set noswapfile      " do not create swap files
+set nobackup        " don't ctreate backup files
 set mousehide       " hide the mouse while typing
 
 augroup autoit

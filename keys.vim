@@ -5,6 +5,8 @@ else
   set clipboard+=unnamed    " share windows clipboard
 endif
 
+" speed-up input
+nnoremap ; :
 
 if exists(':tnoremap')
   " quick run and exit terminal

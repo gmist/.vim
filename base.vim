@@ -60,7 +60,7 @@ set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁ
 
 if has("nvim") || has("gui_running") || $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   syntax on " syntax highlighting on
-  if !has("nvim")
+  if !has("nvim") || !has("gui_running")
     set t_Co=256 " number of colors
   else
     let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1

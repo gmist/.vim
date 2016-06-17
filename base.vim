@@ -62,6 +62,8 @@ if has("nvim") || has("gui_running") || $TERM == "xterm-256color" || $TERM == "s
   syntax on " syntax highlighting on
   if !has("nvim")
     set t_Co=256 " number of colors
+  else
+    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   endif
   let g:solarized_termcolors=256 " set number of colors for a solarized* themes
   let base16colorspace=256 " access colors present in 256 colorspace
@@ -99,13 +101,3 @@ if has("gui_macvim") || has("gui_vimr")
   set guifont=Monaco:h12
 endif
 
-
-"NeoVim-specific configurations
-if has("nvim")
-  syntax on " syntax highlighting on
-
-  " makes the cursor a pipe in insert-mode and a block in normal-mode
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-  let g:solarized_termcolors=256 " set number of colors for a solarized* themes
-  let base16colorspace=256 " access colors present in 256 colorspace
-endif

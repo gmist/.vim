@@ -20,7 +20,7 @@ set backspace=indent,eol,start " more powerful backspacing
 set concealcursor=nc           " don't conceal while editing
 
 set laststatus=2    " always show the status line
-set cursorline      " highlight current line
+set nocursorline    " don't highlight current line
 set scrolljump=5    " number of lines to scroll when the cursor gets off screen
 set mousehide       " hide the mouse while typing
 

@@ -16,6 +16,7 @@ set shiftround      " when at 3 spaces, and I hit > ... go to 4, not 5
 set nowrap          " dont wrap lines
 set noshowcmd       " hide the last command
 set autoread        " reload file if it has changed outside
+set linespace=0     " no extra spaces between rows
 set backspace=indent,eol,start " more powerful backspacing
 set concealcursor=nc           " don't conceal while editing
 

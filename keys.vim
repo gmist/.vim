@@ -34,31 +34,37 @@ if exists(':tnoremap')
   tnoremap œ <C-\><C-n>:bd!<CR>:<backspace>
 endif
 
-nnoremap <C-H> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <C-q> <C-w>c
 
-" set focus to new split
+" remap window navigation
+nnoremap <C-H> <C-w>h
+nnoremap <C-J> <C-w>j
+nnoremap <C-K> <C-w>k
+nnoremap <C-L> <C-w>l
+
+
+" remap tab navigation
+map <S-L> gt
+map <S-H> gT
+
+
+" remap buffer navigation
+nmap ∆ :bp!<CR>:<backspace>
+nmap ˚ :bn!<CR>:<backspace>
+nmap љ :bn!<CR>:<backspace>
+nmap œ :bd<CR>:<backspace>
+nmap ∑ :Bclose<CR>:<backspace>
+
+
+" remap split behavior
 nnoremap <C-w>v <C-w>v<C-w>l
 nnoremap <C-w>s <C-w>s<C-w>j
+
 
 nnoremap \wo <C-w>o
 nnoremap \wv <C-w>v<C-w>l
 nnoremap \ws <C-w>s<C-w>j
 nnoremap \wq :bd<CR>:<backspace>
 nnoremap \ww :Bclose<CR>:<backspace>
-
-
-" quick navigation between buffers
-nmap ∆ :bp!<CR>:<backspace>
-nmap ˚ :bn!<CR>:<backspace>
-nmap љ :bn!<CR>:<backspace>
-nmap œ :bd<CR>:<backspace>
-nmap ∑ :Bclose<CR>:<backspace>
-nnoremap ¬ gt
-nnoremap ˙ gT
 
 
 " unsets search highlight by hitting return
@@ -73,6 +79,11 @@ vnoremap // y/<C-R>"<CR>
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 set scrolloff=3
+
+
+" shifting in visual mode
+vnoremap < <gv
+vnoremap > >gv
 
 
 " improve naviation on wrapped lines

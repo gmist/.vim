@@ -71,6 +71,9 @@ if has("nvim") || has("gui_running") || $TERM == "xterm-256color" || $TERM == "s
     let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   endif
   let g:solarized_termcolors=256 " set number of colors for a solarized* themes
+  let g:solarized_termtrans=1
+  let g:solarized_contrast="normal"
+  let g:solarized_visibility="normal"
   let base16colorspace=256 " access colors present in 256 colorspace
 endif
 

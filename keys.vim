@@ -104,6 +104,10 @@ vnoremap x "_x
 noremap X "_dd
 vnoremap X "_dd
 
+" fast horizontal scrolling
+map zl zL
+map zh zH
+
 
 " Fix pressed Shift
 cab W! w!

@@ -48,6 +48,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " alignment plugin
 Plug 'junegunn/vim-easy-align'
 
+" Vim motions on speed
+Plug 'easymotion/vim-easymotion'
+
 " }}} end navigation plugins
 
 

@@ -1,4 +1,6 @@
-map <F2> :NERDTreeToggle %<CR>
+map <F2> :NERDTreeToggle<CR>
+map <F1> :NERDTreeToggle %<CR>
+
 let g:NERDTreeWinSize=32
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']

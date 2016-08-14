@@ -16,6 +16,9 @@ let g:winresizer_start_key = '<C-R>'
 " Light your buffers up
 Plug 'Soares/butane.vim'
 
+" The interactive scratchpad for hackers
+Plug 'metakirby5/codi.vim'
+
 " }}} end tools plugins
 
 

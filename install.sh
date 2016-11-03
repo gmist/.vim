@@ -62,7 +62,7 @@ fi
 
 if [ ! -d ~/.config/nvim ]; then
   if [ ! -d ~/.config ]; then
-    mkdir ~/.confg
+    mkdir ~/.config
   fi
   ln -s ~/.vim ~/.config/nvim
 fi

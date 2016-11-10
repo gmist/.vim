@@ -46,6 +46,16 @@ else
 fi
 
 
+echo "Check cmake..."
+which cmake > /dev/null
+if [ "$?" != "0" ]; then
+  echo "Oops... cmake was not found, install it before"
+  exit 1
+else
+  echo "Ok"
+fi
+
+
 if [ ! -f ~/.vimrc ] && [ ! -d ~/.vim ]; then
   create_vim_files
 else

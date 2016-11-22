@@ -3,7 +3,7 @@ osascript -e \
     tell application "System Events"
         set old_frontmost to item 1 of (get name of processes whose frontmost is true)
     end tell
-    tell application "iTerm2"
+    tell application "iTerm"
         set myterm to (create window with default profile)
         tell current session of first window
             write text "cd " & quoted form of (item 2 of argv)

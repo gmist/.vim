@@ -13,6 +13,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'simeji/winresizer'
 let g:winresizer_start_key = '<C-R>'
 
+" Toggle between one window and multi-window
+Plug 'itspriddle/ZoomWin'
+
 " Light your buffers up
 Plug 'Soares/butane.vim'
 

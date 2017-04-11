@@ -107,6 +107,9 @@ Plug 'fatih/vim-go'
 " automatically adjusts 'shiftwidth' and 'expandtab'
 Plug 'tpope/vim-sleuth'
 
+" Syntax definition rules for 1C:Enterprise 8
+Plug 'andreevlex/vim-language-1c-bsl'
+
 " }}} end syntax plugins
 
 

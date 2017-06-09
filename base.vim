@@ -110,3 +110,8 @@ if has("gui_macvim") || has("gui_vimr")
   set guifont=Monaco:h12
 endif
 
+if has('persistent_undo')
+  set undofile
+  set undodir=$HOME/.vim/undo
+endif
+

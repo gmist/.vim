@@ -99,8 +99,8 @@ vnoremap Y y$
 
 
 " delete symbols and strings
-noremap d "_dd<ESC>
-vnoremap d "_dd<ESC>
+noremap d "_d<ESC>
+vnoremap d "_d<ESC>
 
 " fast horizontal scrolling
 map zl zL

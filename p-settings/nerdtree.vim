@@ -1,3 +1,4 @@
+map <F1> :NERDTreeFind<CR>
 map <F2> :NERDTreeToggle<CR>
 
 let g:NERDTreeWinSize=32

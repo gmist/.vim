@@ -31,6 +31,9 @@ Plug 'metakirby5/codi.vim'
 " A tree explorer plugin
 Plug 'scrooloose/nerdtree'
 
+" Showing git status for NERDTree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " displays tags in a window, ordered by scope
 if executable('ctags')
   Plug 'majutsushi/tagbar'

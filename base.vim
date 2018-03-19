@@ -107,7 +107,7 @@ endif
 "MacVim-specific configurations
 if has("gui_macvim") || has("gui_vimr")
   set imd
-  set guifont=Monaco:h12
+  set guifont=Menlo:h12
 endif
 
 if has('persistent_undo')
